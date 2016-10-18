@@ -1,0 +1,71 @@
+.row1
+{
+  margin: 10px; 
+
+}
+.col
+{
+    padding-top: 10px;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    margin-left: -25px;
+}
+.btn
+{
+  margin-top: 0px;
+  margin-left: -40px; 
+}
+
+.row2
+{
+  height: 70px;
+  padding-top: 12px;
+}
+
+.img1
+{
+  margin-left: 5px;
+}
+
+
+
+#section3
+{
+
+ 
+  background-image: url('images/hbg2.png');
+  padding-top:275px;
+  padding-bottom: 50px;
+  height: 200px;  
+ 
+}
+
+.button2 {
+  background-color: #ccf977; /* Green */
+  border: none;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 0px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 50px;
+
+}
+.button3
+{
+  background-color: #ADFF2F;
+  border: none;
+  color: white;
+  padding: 10px 60px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0px 0px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+

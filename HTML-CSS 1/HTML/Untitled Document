@@ -1,0 +1,99 @@
+.row1
+{
+  margin: 10px;  
+}
+
+small 
+{ 
+  font-size: smallest;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.srch-btn
+{
+  margin-top: 3px;
+}
+
+span.link 
+{    
+  font-size: 10px;
+  text-decoration: none;
+}
+
+span.call
+{
+  font-size: 12px;
+  text-align: left;
+  font-family: "MS LineDrow", Georgia, Serif;
+}
+
+input[type="text"] 
+{
+  width: 100px;
+}
+
+input[type="submit"] 
+{
+  width: 20px;
+}
+
+input#image-button
+{
+  background: white url('images/top_search.png') ;  
+}
+
+#download
+{
+  width:100%;
+  position: absolute;
+  top: 100px;
+  height: 70px;
+  background-color:#ADABAB;
+
+}
+.txt
+{
+  width: 47%;
+  color: white;
+  padding-top: 23px;
+  float: left;
+  border :0px solid red;
+}
+#icon5
+{
+  border: 0px solid red;
+  width: 25%;
+  float:left;
+  padding-top: 5px;
+}
+
+}
+#text2
+{
+  border: 0px solid red;
+  width:40%;
+  font-size: 20px;
+  float:center;
+  color: white;
+  text-align: left;
+  display: inline-block;
+  margin:0 auto;
+  margin-top:20px; 
+  width:100px;
+}
+
+
+
+#download2
+{
+  border: 0px solid red;
+  width: 27%;
+  float:right;
+  padding-top: 16px;
+
+
+}
+
+
+
