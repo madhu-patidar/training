@@ -428,16 +428,16 @@ height:70px; width:50px;
 #section3
 {
 margin-top: 20px;
-  padding-top: 10px;
-  color:  #8c8c8c;
-  background-image: url('images/hbg6.png');
-  background-size: 950px 750px;
-  background-repeat: no-repeat;
-  position:relative;
-  height: 750px;  
-  border: 0px solid red;
+padding-top: 10px;
+color:  #8c8c8c;
+background-image: url('images/hbg6.png');
+background-size: 950px 750px;
+background-repeat: no-repeat;
+position:relative;
+height: 750px;  
+border: 0px solid red;
 
-  width:100%;
+width:100%;
 }
 #left_box
 {
@@ -573,7 +573,7 @@ padding-top: 50px;
     padding-right: 100px;
      border: 0px solid red;
 }
-
+}
 .blog-section
 {
     border: 0px solid red;
