@@ -112,5 +112,5 @@ function calculate_age()
     {
         age1--;
     }
-    document.getElementById("demo").value = math.format(age1, 2);
+    document.getElementById("demo").value =age1;
 }
