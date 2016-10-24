@@ -15,7 +15,9 @@
     var about_you = document.myform.about_you.value;
     var atposition=email.indexOf("@");  
     var dotposition=email.lastIndexOf("."); 
-    var re = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])/;  
+    var re = /(?=.*[0-9])/ ;
+    var re2 = /(?=.*[a-z])/; 
+     var re3 = /(?=.*[A-Z])/;   
     if (firstname==null || firstname==""){  
         alert("First Name can't be blank");
         document.myform.firstname.focus();  
@@ -29,7 +31,7 @@
         document.myform.phone.focus();   
         return false;
     }else if (isNaN(phone) == true){  
-        alert("Only Number Acceptd");
+        alert("Only Number Accepted");
         document.myform.phone.focus();   
         return false;
     }else if (phone.length != 10 ){  
@@ -37,7 +39,7 @@
         document.myform.phone.focus();   
         return false;
     }else if (isNaN(office) == true){  
-        alert("Only Number Acceptd");
+        alert("Only Number Accepted");
         document.myform.office.focus();   
         return false; 
     }else if (atposition < 1 || dotposition < atposition+2 || dotposition+2 >= email.length  || email.match(/\@/g).length > 1){  
@@ -51,8 +53,8 @@
         alert("Password length must be between 8 to 12 characters ."); 
         document.myform.password.focus(); 
         return false; 
-    }else if (!re.test(password)){
-        alert("Password should accept only Upper-case, lower-case and Numerical characters, No Special characters");
+    }else if (!re.test(password) || (!re2.test(password) && !re3.test(password))){
+        alert("Password should accept only Alphanumeric characters, No Special characters");
         document.myform.password.focus();
         return false;
     }else if (password1 == null || password1 == ""){  
@@ -112,5 +114,6 @@ function calculate_age()
     {
         age1--;
     }
-    document.getElementById("demo").value =age1;
+var n = age1.toPrecision(4);
+    document.getElementById("demo").value =n;
 }
