@@ -6,6 +6,7 @@
     var email = document.myform.email.value;
     var password = document.myform.password.value;
     var password1 = document.myform.password1.value; 
+    var birth_year = document.myform.year.value; 
     var residence1 = document.getElementById('residence1').checked;
     var residence2 = document.getElementById('residence2').checked;
 
@@ -66,6 +67,10 @@
         alert("password must be same!");  
         document.myform.password1.focus();
         return false; 
+    }else if (isNaN(birth_year) == true ){  
+        alert("Date of birth is Compulsory");
+        document.myform.phone.focus();   
+        return false;
     }else if(residence1 == false && residence2 == false){ 
         alert("Please select Gender");  
         document.myform.residence1.focus(); 
