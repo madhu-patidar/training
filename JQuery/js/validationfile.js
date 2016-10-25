@@ -1,12 +1,12 @@
  function validateform(){ 
-    var firstname = document.myform.firstname.value;
-    var lastname = document.myform.lastname.value;
+    var firstName = document.myform.firstname.value;
+    var lastName = document.myform.lastname.value;
     var phone = document.myform.phone.value; 
     var office = document.myform.office.value;
     var email = document.myform.email.value;
     var password = document.myform.password.value;
     var password1 = document.myform.password1.value; 
-    var birth_year = document.myform.year.value; 
+    var birthYear = document.myform.year.value; 
     var residence1 = document.getElementById('residence1').checked;
     var residence2 = document.getElementById('residence2').checked;
 
@@ -14,18 +14,18 @@
     var checkbox_sample19 = document.getElementById('checkbox_sample19').checked;
     var checkbox_sample20 = document.getElementById('checkbox_sample20').checked;
     var about_you = document.myform.about_you.value;
-    var atposition=email.indexOf("@");  
-    var dotposition=email.lastIndexOf("."); 
+    var atPosition=email.indexOf("@");  
+    var dotPosition=email.lastIndexOf("."); 
     var re = /(?=.*[0-9])/ ;
     var re2 = /(?=.*[a-z])/; 
-    var re3 = /(?=.*[A-Z])/;   
-    if (firstname==null || firstname==""){  
+     var re3 = /(?=.*[A-Z])/;   
+    if (firstName==null || firstName==""){  
         alert("First Name can't be blank");
-        document.myform.firstname.focus();  
+        document.myform.firstName.focus();  
         return false;
-    }else if (lastname==null || lastname==""){  
+    }else if (lastName==null || lastName==""){  
         alert("Last Name can't be blank");
-        document.myform.lastname.focus();  
+        document.myform.lastName.focus();  
         return false; 
     }else if (phone==null || phone==""){  
         alert("Phone Number can't be blank");
@@ -43,7 +43,7 @@
         alert("Only Number Accepted");
         document.myform.office.focus();   
         return false; 
-    }else if (atposition < 1 || dotposition < atposition+2 || dotposition+2 >= email.length  || email.match(/\@/g).length > 1){  
+    }else if (atPosition < 1 || dotPosition < atPosition+2 || dotPosition+2 >= email.length  || email.match(/\@/g).length > 1){  
         alert("Please enter a valid e-mail address (Format:abc123@xyz.com)");  
         return false;
     }else if (password==null || password==""){  
@@ -67,7 +67,7 @@
         alert("password must be same!");  
         document.myform.password1.focus();
         return false; 
-    }else if (isNaN(birth_year) == true ){  
+    }else if (isNaN(birthYear) == true ){  
         alert("Date of birth is Compulsory");
         document.myform.phone.focus();   
         return false;
@@ -79,8 +79,8 @@
         alert("Please should have minimum 1 value selected");  
         document.myform.checkbox_sample18.focus(); 
         return false;
-    }else if (about_you==null || about_you=="" || about_you.length < 10){  
-        alert("About you minimum 10 characters are Compulsory");
+    }else if (aboutYou==null || aboutYou==""){  
+        alert("About you is Compulsory");
         document.myform.about_you.focus();   
         return false; 
     }  else return true;
@@ -91,23 +91,23 @@
 function calculate_age()
 {
 
-    today_date = new Date();
-    today_year = today_date.getFullYear();
-    today_month = today_date.getMonth();
-    today_day = today_date.getDate();
-    var birth_year = document.myform.year.value;
-    var birth_month = document.myform.month.value;
-    var birth_day = document.myform.day.value;
-    var age1 = today_year - birth_year;
-        age1--;
-        var month1 = ((12 - birth_month) + today_month + 1 )/12;
-        age1 += month1;
-   
+    todayDate = new Date();
+    todayYear = todayDate.getFullYear();
+    todayMonth = todayDate.getMonth();
+    todayDay = todayDate.getDate();
+    var birthYear = document.myform.year.value;
+    var birthMonth = document.myform.month.value;
+    var birthDay = document.myform.day.value;
+    var age = todayYear - birthYear;
 
-    if (((birth_month - 1) == today_month) && (today_day < birth_day))
+
+    age1--;
+    var month1 = ((12 - birthMonth) + todayMonth + 1 )/12;
+    age1 += month1;
+    if (((birthMonth - 1) == todayMonth) && (todayDay < birthDay))
     {
-        age1--;
+        age--;
     }
-    var n = age1.toPrecision(4);
-    document.getElementById("demo").value =n;
+var n = age.toPrecision(4);
+    document.getElementById("demo").value = n;
 }
