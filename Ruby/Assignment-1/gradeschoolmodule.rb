@@ -41,7 +41,7 @@ module StudentRecord
     else
       puts "\nEnter Student name"
       sname = gets.chomp!
-      sname1 = @@studentgrade.select{ |key| check(sname,key) }
+      sname1 = @@studentgrade.select{ |key| key.downcase == sname.downcase }
       sname = sname1.keys
       sname = sname[0].to_s
       puts "#{sname}'s grade is  #{@@studentgrade[sname]}"
@@ -64,11 +64,5 @@ module StudentRecord
      
     end
   end
-  def check(name,key)
-    if key.casecmp(name) == 0
-      return true
-    else return false
-    end
-    true
-  end
+  
 end
