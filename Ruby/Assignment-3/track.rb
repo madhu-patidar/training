@@ -39,8 +39,11 @@ begin
   puts "#{morning_time.strftime('%I:%M%p')} #{subject_array[i]}"
   morning_time = morning_time + times_array[i]*60
   i = i+1
+  if i == len - 1
+    i = 0  
+  end
 
-  if morning_time.strftime('%H:%M%p') == "12:00PM"
+  if morning_time.strftime('%I:%M%p') == "12:00PM"
     puts "#{morning_time.strftime('%H:%M%p')} Lunch"
     morning_time = morning_time + times_array[i]*60
     break  
@@ -55,6 +58,9 @@ begin
   end
    puts "#{morning_time.strftime('%I:%M%P')} #{subject_array[i]}"
    i = i + 1
+   if i == len - 1
+    i = 0  
+   end
 end while true
 
 morning_time = Time.local(2016,11,17,9,00,00)
@@ -63,6 +69,9 @@ puts "Track 2:"
   puts "#{morning_time.strftime('%I:%M%p')} #{subject_array[i]}"
   morning_time = morning_time + times_array[i]*60
   i = i+1
+  if i == len - 1
+    i = 0  
+  end
   if morning_time.strftime('%H:%M%p') == "12:00PM"
     puts "#{morning_time.strftime('%H:%M%p')} Lunch"
     morning_time = morning_time + times_array[i]*60
@@ -71,13 +80,16 @@ puts "Track 2:"
 end while true
 begin
    morning_time = morning_time + times_array[i]*60
-  if morning_time.strftime('%I:%M%') >= "04:00PM" && morning_time.strftime('%I:%M%') <= "05:00PM"
+  if morning_time.strftime('%I:%M%') >= "04:30PM" && morning_time.strftime('%I:%M%') <= "05:00PM"
     puts "#{morning_time.strftime('%I:%M%p')} Networking Event"
     break  
   end
    puts "#{morning_time.strftime('%I:%M%P')} #{subject_array[i]}"
    i = i + 1
+   if i == len - 1
+    i = 0  
+   end
 end while true
-
+morning_time = Time.local(2016,11,18,9,00,00)
 
 

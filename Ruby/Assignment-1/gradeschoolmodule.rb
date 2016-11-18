@@ -2,20 +2,9 @@
 module StudentRecord
   @@studentgrade = Hash.new("not found student/gread")
   def addstudent
-    begin
+   
       puts "insert student name"
       name = gets.chomp.to_s
-      if name =~ /[a-zA-Z]+/
-        break
-      else
-        puts "please enter valid name"
-      end
-        
-
-    
-    end while true
-    
-    name = name.downcase
     begin
       puts "insert " + name + " grade 1/2/3/4/5"
       grade = gets.to_i
@@ -51,12 +40,11 @@ module StudentRecord
       puts "No student record"
     else
       puts "\nEnter Student name"
-
-      stname = gets.chomp!
-      sname = stname.downcase
-
-     sname1 = @@studentgrade.select{ |key| key.casecmp(sname)==0 }
-        puts "#{stname}'s grade is  #{@@studentgrade[sname]}"
+      sname = gets.chomp!
+      sname1 = @@studentgrade.select{ |key| check(sname,key) }
+      sname = sname1.keys
+      sname = sname[0].to_s
+      puts "#{sname}'s grade is  #{@@studentgrade[sname]}"
       
     end
   end
@@ -75,5 +63,12 @@ module StudentRecord
       end
      
     end
+  end
+  def check(name,key)
+    if key.casecmp(name) == 0
+      return true
+    else return false
+    end
+    true
   end
 end
