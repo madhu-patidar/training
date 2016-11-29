@@ -1,0 +1,50 @@
+<%= form_for @valtest do |f| %>
+ 
+  <% if @valtest.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@valtest.errors.count, "error") %> prohibited
+        this valtest from being saved:
+      </h2>
+      <ul>
+        <% @valtest.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :Name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :age %><br>
+    <%= f.text_field :email_confirmation %>
+  </p>
+  
+    <%= f.submit %>
+  </p>
+  <p>
+    <%= f.label :Email %><br>
+    <%= f.text_field :email %>
+  </p>
+ 
+  <p>
+    <%= f.label :ConfirmEmail %><br>
+    <%= f.text_field :email_confirmation %>
+  </p>
+  
+  <p>
+    <%= f.label :Password %><br>
+    <%= f.text_field :password %>
+  </p>
+ 
+  <p>
+    <%= f.label :Phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </p>
+  
+ 
+<% end %>

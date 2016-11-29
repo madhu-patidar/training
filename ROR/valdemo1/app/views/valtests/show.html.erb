@@ -1,0 +1,34 @@
+<p>
+   <% if @valtest.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@valtest.errors.count, "error") %> prohibited
+        this valtest from being saved:
+      </h2>
+      <ul>
+        <% @valtest.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @valtest.name %>
+</p>
+<p>
+  <strong>Age:</strong>
+  <%= @valtest.age %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @valtest.email %>
+</p>
+<p>
+  <strong>Phone Number:</strong>
+  <%= @valtest.phone_number %>
+</p>
+ 
+
+<%= link_to 'Bake', valtests_path %>

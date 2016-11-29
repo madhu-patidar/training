@@ -14,19 +14,21 @@ class EmployeesController < ApplicationController
   end
 
   def new
+     @employee = Employee.new
   end
 
   def update
     @employee = Employee.find(params[:id])
    
-    if @employee.update(params.require(:employee).permit(:name, :designation,:salary))
+    if @employee.update(params.require(:employee).permit(:name, :designation,:salary,:city))
       redirect_to @employee
     else
       render 'edit'
     end
+
   end
   def create
-    @employee = Employee.new(params.require(:employee).permit(:name, :designation,:salary))
+    @employee = Employee.new(params.require(:employee).permit(:name, :designation,:salary,:city))
     @employee.save
     redirect_to @employee
   end

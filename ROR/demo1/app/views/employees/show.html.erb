@@ -12,6 +12,14 @@
   <strong>Salary:</strong>
   <%= @employee.salary%>
 </p>
+<p>
+  <strong>City:</strong>
+  <% if @employee.city == true%>
+  In City
+  <%else %>
+  Out City
+  <%end%>
+</p>
 
 
 <%= link_to 'Bake', employees_path %>

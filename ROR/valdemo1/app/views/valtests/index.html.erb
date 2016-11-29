@@ -1,0 +1,23 @@
+<h1>Listing valtests</h1>
+ <%= link_to 'New Record', new_valtest_path %>
+ <table>
+<tr>
+  <th>Name</th>
+  <th>Age</th>
+  <th>Email ID</th>
+  <th>Phone Number</th>
+</tr>
+  <% @valtest.each do |valtest| %>
+    <tr>
+      <td><%= valtest.name %></td>
+      <td><%= valtest.age %></td>
+      <td><%= valtest.email %></td>
+      <td><%= valtest.phone_number %></td>
+       <td><%= link_to 'Edit', edit_valtest_path(valtest) %></td>
+       <td><%= link_to 'Destroy', valtest_path(valtest),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td> 
+  </tr>
+
+  <% end %>
+  </table>

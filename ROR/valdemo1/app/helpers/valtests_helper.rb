@@ -1,0 +1,2 @@
+module ValtestsHelper
+end

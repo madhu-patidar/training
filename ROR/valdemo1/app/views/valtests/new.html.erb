@@ -1,0 +1,55 @@
+
+
+ <%= form_for @valtest do |f| %>
+ 
+ <p>
+    <%= f.label :Name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :Age %><br>
+    <%= f.text_field :age %>
+  </p>
+  <% if @valtest.new_record? %>
+    <p>
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </p>
+  <%end%>
+  <p>
+    <%= f.label :ConfirmEmail %><br>
+    <%= f.text_field :email_confirmation %>
+  </p> 
+
+  <p>
+    <%= f.label :Password  %><br>
+    <%= f.password_field :password%>
+  </p>
+
+  <p>
+    <%= f.label :Phone_Number %><br>
+    <%= f.text_field :phone_number %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+ <% end %>
+
+
+
+<%= link_to 'Back', valtests_path %>
+ <% if @valtest.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@valtest.errors.count, "error") %> prohibited
+        this valtest from being saved:
+      </h2>
+      <ul>
+        <% @valtest.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+   <% end %>
