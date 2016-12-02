@@ -1,11 +1,9 @@
 #!/usr/bin/ruby
 class Ch
-def test
-   
- puts "Hello World!"
+  a = 10
+def test 
+print"#{a}"
 end
 end
  obj = Ch.new
-obj.test
-puts "hello..".class.class.class.class
-puts Class.class
+ obj.test

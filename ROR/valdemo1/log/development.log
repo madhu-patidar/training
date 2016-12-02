@@ -8154,3 +8154,867 @@ Processing by ValtestsController#edit as HTML
   [1m[36mValtest Load (0.2ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
   Rendered valtests/edit.html.erb within layouts/application (10.3ms)
 Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 12:13:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ValtestsController#index as HTML
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/webwerks/Assignments/training/ROR/valdemo1/app/models/valtest.rb:23: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/models/valtest.rb:23: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/valtests_controller.rb:4:in `index'
+
+
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (141.6ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (95.8ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (148.9ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 12:13:30 +0530
+Processing by ValtestsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/webwerks/Assignments/training/ROR/valdemo1/app/models/valtest.rb:23: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/models/valtest.rb:23: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/valtests_controller.rb:4:in `index'
+
+
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.8ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.2ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (61.3ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 12:15:16 +0530
+Processing by ValtestsController#index as HTML
+  [1m[35mValtest Load (0.7ms)[0m  SELECT "valtests".* FROM "valtests"
+  Rendered valtests/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 595ms (Views: 588.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/valtests/20/edit" for 127.0.0.1 at 2016-11-30 12:15:22 +0530
+Processing by ValtestsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mValtest Load (0.4ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  Rendered valtests/edit.html.erb within layouts/application (75.7ms)
+Completed 200 OK in 179ms (Views: 97.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:15:35 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Om9usL5X38U3I2dZyqbRFXRtiOGZ/gMdbaNO9RCEpW7BunQQRKsTcDy1P3gP54lmJpiAXHmdMDSn4j1exR4/+Q==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mValtest Exists (0.3ms)[0m  SELECT  1 AS one FROM "valtests" WHERE ("valtests"."email" = '' AND "valtests"."id" != 20) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 121ms (Views: 35.9ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:15:49 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gq5kSRSMRbq3z9QjzfCH34wZWo0Ps5i3SFXGzzKdubl5e37p7nCJD7xZjAIIsd+s3uxSMO/Qq56CFLVk5wcjLg==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mValtest Exists (0.3ms)[0m  SELECT  1 AS one FROM "valtests" WHERE ("valtests"."email" = '' AND "valtests"."id" != 20) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 73ms (Views: 52.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/valtests/20" for 127.0.0.1 at 2016-11-30 12:16:16 +0530
+Processing by ValtestsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mValtest Load (0.3ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  Rendered valtests/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 57ms (Views: 37.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 12:16:23 +0530
+Processing by ValtestsController#index as HTML
+  [1m[36mValtest Load (0.6ms)[0m  [1mSELECT "valtests".* FROM "valtests"[0m
+  Rendered valtests/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/valtests/20/edit" for 127.0.0.1 at 2016-11-30 12:16:27 +0530
+Processing by ValtestsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mValtest Load (0.3ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  Rendered valtests/edit.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:16:34 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RfmNRMrKk/72WFKJUKA/bOr4bBc1EIJ0cv/ZymqESs6+LJfkMDZfS/3OCqiV4WcfuA1kqtVzsV24vqphvx7QWQ==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.2ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 68ms (Views: 54.7ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:16:41 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MsTMxI7vUfwhffnqePee76uJ8mV4SrQXge5JGBBS1mrJEdZkdBOdSSrrocu9tsac+Xz62Jgphz5LrzqzxchM/Q==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  UPDATE "valtests" SET "email" = ?, "email_confirmation" = ?, "password" = ?, "updated_at" = ? WHERE "valtests"."id" = ?  [["email", ""], ["email_confirmation", ""], ["password", "123456"], ["updated_at", "2016-11-30 06:46:41.435452"], ["id", 20]]
+  [1m[36m (181.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/valtests/20
+Completed 302 Found in 200ms (ActiveRecord: 184.9ms)
+
+
+Started GET "/valtests/20" for 127.0.0.1 at 2016-11-30 12:16:41 +0530
+Processing by ValtestsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  Rendered valtests/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 12:16:46 +0530
+Processing by ValtestsController#index as HTML
+  [1m[36mValtest Load (0.4ms)[0m  [1mSELECT "valtests".* FROM "valtests"[0m
+  Rendered valtests/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/valtests/20/edit" for 127.0.0.1 at 2016-11-30 12:20:17 +0530
+Processing by ValtestsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mValtest Load (0.6ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  Rendered valtests/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 77ms (Views: 52.2ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:20:22 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yuo7DOTA4XLF8+7X30KIXpZbJToKYvn9nHiXwZnM6cE/rJMyW/PMMCBl5qaPFJSKKxkKQhKuM48MJH00/2pMA==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.3ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 59ms (Views: 46.7ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:23:08 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RNqmuzdIQ32NZtGUj60vvmalcvqzPRR8fx45E9X3w/O/D7wbzbSPyIbwibVK7HfNNFB6R1NeJ1W1X0q4AG1ZZA==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/webwerks/Assignments/training/ROR/valdemo1/app/models/valtest.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...age, :password, :email presence: true
+...                               ^):
+  app/models/valtest.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/controllers/valtests_controller.rb:30:in `update'
+
+
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.0ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (27.4ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (55.2ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:23:37 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RNqmuzdIQ32NZtGUj60vvmalcvqzPRR8fx45E9X3w/O/D7wbzbSPyIbwibVK7HfNNFB6R1NeJ1W1X0q4AG1ZZA==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.4ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered valtests/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 57ms (Views: 32.4ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:23:46 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qyjM8NpJJXBZvNz27945WFC7pDZ939F9Tz7mzkD4DJNQ/dZQILXpxVIqhNcqn2ErAk6si5284lSFf5VllWKWBA==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.2ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 58ms (Views: 46.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:24:17 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sRtWnlpxTidAUS17iMavMtv8GyXYaLuA2tzvutDe5xhKzkw+oI2CkkvHdVpNh/dBiQkTmDgLiKkQnZwRBUR9jw==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.5ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered valtests/edit.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 80ms (Views: 46.1ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:24:19 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"307XbJ9GK/zjyymXDQD2U23RKv5uUoeuzJ6fcs18LrIkm83MZbrnSehdcbbIQa4gPyQiQ44xtIcG3+zZGOa0JQ==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.2ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 76ms (Views: 55.2ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:25:03 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nEyykZJ+VUhh32JEFbVGcJG/NdeYhn6HimtA1ja0CbVnmagxaIKZ/WpJOmXQ9B4Dw0o9anjlTa5AKjN94y6TIg==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.5ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered valtests/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 85ms (Views: 46.3ms | ActiveRecord: 3.0ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 12:28:49 +0530
+Processing by ValtestsController#index as HTML
+  [1m[36mValtest Load (3.4ms)[0m  [1mSELECT "valtests".* FROM "valtests"[0m
+  Rendered valtests/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 12:28:52 +0530
+Processing by ValtestsController#index as HTML
+  [1m[35mValtest Load (0.5ms)[0m  SELECT "valtests".* FROM "valtests"
+  Rendered valtests/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveEmailConfiramationFromValtests (20161130070141)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TEMPORARY TABLE "avaltests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email_confiramation" varchar, "email_confirmation" varchar, "name" varchar, "age" integer, "password" varchar, "phone_number" varchar) [0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "valtests"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "avaltests" ("id","email","created_at","updated_at","email_confiramation","email_confirmation","name","age","password","phone_number") VALUES (20, '', '2016-11-29 10:37:50.732046', '2016-11-30 06:46:41.435452', NULL, '', 'Madhusudan Patidar', 23, '123456', '9407219808')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "avaltests" ("id","email","created_at","updated_at","email_confiramation","email_confirmation","name","age","password","phone_number") VALUES (21, 'madhupatidar909@gmail.com', '2016-11-29 10:44:36.790309', '2016-11-29 10:44:36.790309', NULL, 'madhupatidar909@gmail.com', 'Madhusudan Patidar', 22, 'Madhu123', '9407219808')
+  [1m[36m (16.1ms)[0m  [1mDROP TABLE "valtests"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "valtests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email_confirmation" varchar, "name" varchar, "age" integer, "password" varchar, "phone_number" varchar) 
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "avaltests"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "valtests" ("id","email","created_at","updated_at","email_confirmation","name","age","password","phone_number") VALUES (20, '', '2016-11-29 10:37:50.732046', '2016-11-30 06:46:41.435452', '', 'Madhusudan Patidar', 23, '123456', '9407219808')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "valtests" ("id","email","created_at","updated_at","email_confirmation","name","age","password","phone_number") VALUES (21, 'madhupatidar909@gmail.com', '2016-11-29 10:44:36.790309', '2016-11-29 10:44:36.790309', 'madhupatidar909@gmail.com', 'Madhusudan Patidar', 22, 'Madhu123', '9407219808')[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "avaltests"
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161130070141"]]
+  [1m[35m (233.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to RemoveEmailConfiramationFromValtests (20161130070141)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "valtests" ADD "email_confiramation" varchar
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20161130070141"]]
+  [1m[35m (192.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveEmailConfiramationFromValtests (20161130070141)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TEMPORARY TABLE "avaltests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email_confirmation" varchar, "name" varchar, "age" integer, "password" varchar, "phone_number" varchar, "email_confiramation" varchar) [0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "valtests"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "avaltests" ("id","email","created_at","updated_at","email_confirmation","name","age","password","phone_number","email_confiramation") VALUES (20, '', '2016-11-29 10:37:50.732046', '2016-11-30 06:46:41.435452', '', 'Madhusudan Patidar', 23, '123456', '9407219808', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "avaltests" ("id","email","created_at","updated_at","email_confirmation","name","age","password","phone_number","email_confiramation") VALUES (21, 'madhupatidar909@gmail.com', '2016-11-29 10:44:36.790309', '2016-11-29 10:44:36.790309', 'madhupatidar909@gmail.com', 'Madhusudan Patidar', 22, 'Madhu123', '9407219808', NULL)
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "valtests"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "valtests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email_confirmation" varchar, "name" varchar, "age" integer, "password" varchar, "phone_number" varchar) 
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "avaltests"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "valtests" ("id","email","created_at","updated_at","email_confirmation","name","age","password","phone_number") VALUES (20, '', '2016-11-29 10:37:50.732046', '2016-11-30 06:46:41.435452', '', 'Madhusudan Patidar', 23, '123456', '9407219808')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "valtests" ("id","email","created_at","updated_at","email_confirmation","name","age","password","phone_number") VALUES (21, 'madhupatidar909@gmail.com', '2016-11-29 10:44:36.790309', '2016-11-29 10:44:36.790309', 'madhupatidar909@gmail.com', 'Madhusudan Patidar', 22, 'Madhu123', '9407219808')[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "avaltests"
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161130070141"]]
+  [1m[35m (189.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 12:53:22 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ValtestsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/valtest.rb:10:in `<class:Valtest>'
+  app/models/valtest.rb:1:in `<top (required)>'
+  app/controllers/valtests_controller.rb:4:in `index'
+
+
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.1ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (28.7ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (57.8ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 12:55:11 +0530
+Processing by ValtestsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/valtest.rb:10:in `<class:Valtest>'
+  app/models/valtest.rb:1:in `<top (required)>'
+  app/controllers/valtests_controller.rb:4:in `index'
+
+
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.8ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (29.3ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (58.5ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 12:55:28 +0530
+Processing by ValtestsController#index as HTML
+  [1m[35mValtest Load (0.5ms)[0m  SELECT "valtests".* FROM "valtests"
+  Rendered valtests/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 58ms (Views: 52.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/valtests/20/edit" for 127.0.0.1 at 2016-11-30 12:55:31 +0530
+Processing by ValtestsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mValtest Load (0.5ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  Rendered valtests/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:55:36 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qEN4PoS+5HPR8tf6uuLbP/9k72G9dfm+hSS0KGRc8HtTlmKefkIoxtpkj9t/o4NMrZHn3F0WypdPZceDscZq7A==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23l;", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered valtests/edit.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 80ms (Views: 58.8ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:55:49 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dP1XrZ1Af2achFRpvx5vTdlYuOk3wQzAr6Ov35zoaTmPKE0NZ7yz05cSDEh6Xzc+i62wVNeiP+ll4tx0SXLzrg==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.2ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 66ms (Views: 46.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:55:58 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Haq0LLOVsApLVYhw1OIcBkvvkL4IOZWZTA/sSBpkxPXmf66MSWl8v0DD0FERo0R1GRqYA+haprCGTp/jz/5eYg==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"940721980"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered valtests/edit.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 58ms (Views: 44.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:56:07 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1xgWQtaMVUcAZYwpMiHvuTJaUp6FFA+cvPowTHE2M9cszQziLHCZ8gvz1Aj3YLfKYK9aI2V3PLV2u0PnpKypQA==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"94072198088"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.2ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 71ms (Views: 57.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/valtests/20" for 127.0.0.1 at 2016-11-30 12:56:29 +0530
+Processing by ValtestsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mValtest Load (0.3ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  Rendered valtests/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 46ms (Views: 30.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 12:56:32 +0530
+Processing by ValtestsController#index as HTML
+  [1m[36mValtest Load (0.4ms)[0m  [1mSELECT "valtests".* FROM "valtests"[0m
+  Rendered valtests/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/valtests/20/edit" for 127.0.0.1 at 2016-11-30 12:56:34 +0530
+Processing by ValtestsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  Rendered valtests/edit.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:56:35 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sKY0ppiFH9iIG5AhQILDSE8zV7zVeqQGe0gDR3ikf/5Lcy4GYnnTbYONyACFw5s7HcZfATUZly+xCXDsrT7laQ==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.2ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 87ms (Views: 73.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 12:56:44 +0530
+Processing by ValtestsController#index as HTML
+  [1m[35mValtest Load (0.3ms)[0m  SELECT "valtests".* FROM "valtests"
+  Rendered valtests/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/valtests/20/edit" for 127.0.0.1 at 2016-11-30 12:56:46 +0530
+Processing by ValtestsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mValtest Load (0.2ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  Rendered valtests/edit.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:56:50 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7DGthO+voK2SF7EgRtKJNes2Hqspx3NHzlqFnlKx8i8X5LckFVNsGJmB6QGDk9FGucMWFsmkQG4EG/Y1hytouA==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"940721980"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered valtests/edit.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 58ms (Views: 42.4ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:57:05 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2alrOZJ25nxr8inZm0vjfBgdEUnWDfmry4CxVnKf7cAs78MHLUXLPo5kIajLHf+opV8+Mc7BM9lb3FujFDlIA==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"940721980"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.4ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 73ms (Views: 38.9ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:57:09 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mK/PmSFMbXnEwV/62wQJhkgM1oc92cEdIQ1mKHHEu0JjetU527ChzM9XB9seRVH1GvneOt268jTrTBWDpF4h1Q==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219805465767"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered valtests/edit.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 67ms (Views: 54.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:57:29 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vy+M1VmHi4mMGJirP7StvW6fgEW7RdPGmRCCnwIDbtJE+pZ1o3tHPIeOwIr69fXOPGqI+Fsm4O9TUfE015n0RQ==", "valtest"=>{"name"=>"MadhusudanPatidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"trytyyty", "password"=>"[FILTERED]", "phone_number"=>"9407219805465767"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.2ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 71ms (Views: 55.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:57:36 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y71rCdkDGgWHBCg9HMiHtlsHsNd/ziRp5rBW1EnzPsyYaHGpI//WsIyScBzZid/FCfK4ap+tF0As8SV/nGmkWw==", "valtest"=>{"name"=>"MadhusudanPatidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"trytyyty", "password"=>"[FILTERED]", "phone_number"=>"9407219805465767"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.3ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  Rendered valtests/edit.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 53ms (Views: 40.1ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:57:46 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+0zxXInk64O5Nl17b91ICSnkSPvO2bxLGTXgg7S4LZYAmev8cxgnNrKgBVqqnBB6exFARi66j2LTdJMoYSK3AQ==", "valtest"=>{"name"=>"MadhusudanPatidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"trytyyty", "password"=>"[FILTERED]", "phone_number"=>"123456789"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.3ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 74ms (Views: 58.4ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:58:17 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SBirm4zGg7gpHmwXIoMsxriZTe/qQlSudAPWQ71+aZizzbE7djpPDSKINDbnwnS16mxFUgohZ4e+QqXoaOTzDw==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"trytyyty", "password"=>"[FILTERED]", "phone_number"=>"123456789"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (1.3ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered valtests/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 80ms (Views: 33.0ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:58:20 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N4NJTfGEf+bHtRn5Ewy8eP/CdvnqRwdVzClA9exyrHzMVlPtC3izU8wjQdjWTeQLrTd+RAokNHwGaDNeOeg26w==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"trytyyty", "password"=>"[FILTERED]", "phone_number"=>"123456789"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.2ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 48ms (Views: 33.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:58:27 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z5chsrm7Evcg8JJU+65BJC5+p0USgL36b6c9i1g+U4icQjsSQ0feQitmynU+7xlXfIuv+PLjjtOl5k4gjaTJHw==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"trytyyty", "password"=>"[FILTERED]", "phone_number"=>"123456789"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered valtests/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 55ms (Views: 45.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 12:58:48 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h6aXaUe2x8e/4mJsJoiMaMSxUbKfNXYsnoUsBlIjcSd8c43JvUoLcrR0Ok3jydQblkRZD39WRQVUxF+th7nrsA==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"trytyyty", "password"=>"[FILTERED]", "phone_number"=>"123456789"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.4ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 56ms (Views: 34.6ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 13:00:50 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qSMR9i7k0HWd0BS9u5XIVNiu1mWuiaWIkb51LxBkDDxS9gtW1BgcwJZGTJx+1JAnilve2E7qlqFb/waExf6Wqw==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"trytyyty", "password"=>"[FILTERED]", "phone_number"=>"123456789"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.4ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered valtests/edit.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 77ms (Views: 46.3ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 13:00:58 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RDth4KKh/Jof+l83SxIsylGEhmfMZQRPZ5ppNT6056u/7ntAWF0wLxRsBxaOU3S5A3GO2iwGN2at2xqe6y59PA==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"trytyyty", "password"=>"[FILTERED]", "phone_number"=>"1234567890"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.2ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 57ms (Views: 45.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 13:01:03 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hX4I+vBCqW62KDLqM859Tivv6CYFAT1/sXZEIGRElf9+qxJaCr5l272+asv2jyU9eRrgm+ViDlZ7NzeLsd4PaA==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"trytyyty", "password"=>"[FILTERED]", "phone_number"=>"1234567890"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "valtests" SET "email" = ?, "email_confirmation" = ?, "password" = ?, "phone_number" = ?, "updated_at" = ? WHERE "valtests"."id" = ?  [["email", "tytytyty"], ["email_confirmation", "trytyyty"], ["password", "q343545"], ["phone_number", "1234567890"], ["updated_at", "2016-11-30 07:31:03.067317"], ["id", 20]]
+  [1m[36m (220.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/valtests/20
+Completed 302 Found in 237ms (ActiveRecord: 221.7ms)
+
+
+Started GET "/valtests/20" for 127.0.0.1 at 2016-11-30 13:01:03 +0530
+Processing by ValtestsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  Rendered valtests/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 13:01:06 +0530
+Processing by ValtestsController#index as HTML
+  [1m[36mValtest Load (0.6ms)[0m  [1mSELECT "valtests".* FROM "valtests"[0m
+  Rendered valtests/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 13:01:55 +0530
+Processing by ValtestsController#index as HTML
+  [1m[35mValtest Load (0.5ms)[0m  SELECT "valtests".* FROM "valtests"
+  Rendered valtests/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 43ms (Views: 38.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/valtests/20/edit" for 127.0.0.1 at 2016-11-30 13:01:58 +0530
+Processing by ValtestsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mValtest Load (0.4ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  Rendered valtests/edit.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 49ms (Views: 45.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 13:02:08 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r8p+IHPC8b6IrAgA5UAGV2+EsjNhbSqBSGM7R7JfCytUH2SAiT49C4M6UCEgAV4kPXG6joEOGaiCIkjsZ8WRvA==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"trytyyty", "password"=>"[FILTERED]", "phone_number"=>"12345678hh"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered valtests/edit.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 84ms (Views: 65.8ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 13:02:16 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pq4FvTq1omzA7kRyz99CFD/B6ouVniCh7RJx3/E2bTvFex8dwElu2ct4HFMKnhpnbTTiNnX9E4gnUwJ0JKz3rA==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"trytyyty", "password"=>"[FILTERED]", "phone_number"=>"1234567856"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[36mValtest Load (0.2ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/edit.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 71ms (Views: 55.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 13:17:58 +0530
+Processing by ValtestsController#index as HTML
+  [1m[35mValtest Load (0.7ms)[0m  SELECT "valtests".* FROM "valtests"
+  Rendered valtests/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 59ms (Views: 51.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/valtests/20/edit" for 127.0.0.1 at 2016-11-30 13:18:01 +0530
+Processing by ValtestsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mValtest Load (0.4ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 20]]
+  Rendered valtests/edit.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/valtests/20" for 127.0.0.1 at 2016-11-30 13:18:08 +0530
+Processing by ValtestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iANJxDbfTBNS9jory8X9n+GLN0ITEbFixd6yE+5AdVhz1lNkzCOApllgYgoOhKXss34///NygksPn8G4O9rvzw==", "valtest"=>{"name"=>"Madhusudan Patidar", "age"=>"23", "email"=>"tytytyty", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"1234567890"}, "commit"=>"Save Valtest", "id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  UPDATE "valtests" SET "email_confirmation" = ?, "password" = ?, "updated_at" = ?, "email" = ? WHERE "valtests"."id" = ?  [["email_confirmation", ""], ["password", "1234556"], ["updated_at", "2016-11-30 07:48:08.066821"], ["email", "Madhusudan Patidar"], ["id", 20]]
+  [1m[36m (194.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/valtests/20
+Completed 302 Found in 207ms (ActiveRecord: 198.0ms)
+
+
+Started GET "/valtests/20" for 127.0.0.1 at 2016-11-30 13:18:08 +0530
+Processing by ValtestsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mValtest Load (0.2ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 20]]
+  Rendered valtests/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 13:18:11 +0530
+Processing by ValtestsController#index as HTML
+  [1m[36mValtest Load (0.4ms)[0m  [1mSELECT "valtests".* FROM "valtests"[0m
+  Rendered valtests/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 16:14:46 +0530
+Processing by ValtestsController#index as HTML
+  [1m[35mValtest Load (0.5ms)[0m  SELECT "valtests".* FROM "valtests"
+  Rendered valtests/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 58ms (Views: 51.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/valtests/new" for 127.0.0.1 at 2016-11-30 16:14:49 +0530
+Processing by ValtestsController#new as HTML
+  Rendered valtests/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/valtests" for 127.0.0.1 at 2016-11-30 16:14:51 +0530
+Processing by ValtestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Jlh7XqVvZ+CYhm2jgRs1/n6ltNh20Z7KmTwShLMe/QfTHtNgGlxKon0QZdLRTSkqw+eboG4dVLgJYPhx1bhYw==", "valtest"=>{"name"=>"", "age"=>"", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>""}, "commit"=>"Create Valtest"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered valtests/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 63ms (Views: 39.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 16:14:57 +0530
+Processing by ValtestsController#index as HTML
+  [1m[36mValtest Load (0.4ms)[0m  [1mSELECT "valtests".* FROM "valtests"[0m
+  Rendered valtests/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/valtests/new" for 127.0.0.1 at 2016-11-30 16:14:59 +0530
+Processing by ValtestsController#new as HTML
+  Rendered valtests/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/valtests" for 127.0.0.1 at 2016-11-30 16:15:33 +0530
+Processing by ValtestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tqd3/gOcXoQzKi8j+A1CCyPhg1v2o+vjSKzrC4xhb5G1cm1e+WCSMTi8dwI9TBp4cRSL5hbA2MqC7ZigWfv1Bg==", "valtest"=>{"name"=>"fggdfg", "age"=>"12", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"1234567890"}, "commit"=>"Create Valtest"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 55ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/valtests" for 127.0.0.1 at 2016-11-30 16:16:30 +0530
+Processing by ValtestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PGfB/iHydhAJCKInYF/MLMiQoKYB21a9GFWfysJcoXPHstte2w66pQKe+galHpRfmmWoG+G4ZZTSFOxhF8Y75A==", "valtest"=>{"name"=>"fggdfg", "age"=>"12", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"1234567890"}, "commit"=>"Create Valtest"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered valtests/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 66ms (Views: 29.2ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/valtests" for 127.0.0.1 at 2016-11-30 16:17:32 +0530
+Processing by ValtestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PGfB/iHydhAJCKInYF/MLMiQoKYB21a9GFWfysJcoXPHstte2w66pQKe+galHpRfmmWoG+G4ZZTSFOxhF8Y75A==", "valtest"=>{"name"=>"fggdfg", "age"=>"12", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"1234567890"}, "commit"=>"Create Valtest"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "valtests" ("email", "email_confirmation", "name", "age", "password", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "fggdfg"], ["email_confirmation", ""], ["name", "fggdfg"], ["age", 12], ["password", "ggfhg"], ["phone_number", "1234567890"], ["created_at", "2016-11-30 10:47:32.840993"], ["updated_at", "2016-11-30 10:47:32.840993"]]
+  [1m[35m (204.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/valtests/22
+Completed 302 Found in 236ms (ActiveRecord: 206.2ms)
+
+
+Started GET "/valtests/22" for 127.0.0.1 at 2016-11-30 16:17:33 +0530
+Processing by ValtestsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mValtest Load (0.4ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 22]]
+  Rendered valtests/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 16:17:41 +0530
+Processing by ValtestsController#index as HTML
+  [1m[35mValtest Load (0.4ms)[0m  SELECT "valtests".* FROM "valtests"
+  Rendered valtests/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/valtests/new" for 127.0.0.1 at 2016-11-30 16:17:53 +0530
+Processing by ValtestsController#new as HTML
+  Rendered valtests/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 55ms (Views: 37.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/valtests" for 127.0.0.1 at 2016-11-30 16:18:29 +0530
+Processing by ValtestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VOgZptmJ8V4jnZdtbHLHDVSOOq1BmOw1XQ3GS5Va5gKvPQMGI3U96ygLz0ypM59+BnsyEKH73xyXTLXgQMB8lQ==", "valtest"=>{"name"=>"ghfghg", "age"=>"234", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"9407219808"}, "commit"=>"Create Valtest"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "valtests" ("email", "email_confirmation", "name", "age", "password", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["email", "ghfghg"], ["email_confirmation", ""], ["name", "ghfghg"], ["age", 234], ["password", "12345"], ["phone_number", "9407219808"], ["created_at", "2016-11-30 10:48:29.215144"], ["updated_at", "2016-11-30 10:48:29.215144"]]
+  [1m[36m (326.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/valtests/23
+Completed 302 Found in 340ms (ActiveRecord: 327.3ms)
+
+
+Started GET "/valtests/23" for 127.0.0.1 at 2016-11-30 16:18:29 +0530
+Processing by ValtestsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mValtest Load (0.3ms)[0m  SELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1  [["id", 23]]
+  Rendered valtests/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 16:18:40 +0530
+Processing by ValtestsController#index as HTML
+  [1m[36mValtest Load (0.7ms)[0m  [1mSELECT "valtests".* FROM "valtests"[0m
+  Rendered valtests/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 56ms (Views: 49.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/valtests/new" for 127.0.0.1 at 2016-11-30 16:18:44 +0530
+Processing by ValtestsController#new as HTML
+  Rendered valtests/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/valtests" for 127.0.0.1 at 2016-11-30 16:19:06 +0530
+Processing by ValtestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qsAdTqVYesuInlfT5cHuPh1hjA3+Ke9YLV27bc4zDL1RFQfuX6S2foMID/IggLZNT5SEsB5K3HHnHMjGG6mWKg==", "valtest"=>{"name"=>"mnb", "age"=>"54", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"8888888888"}, "commit"=>"Create Valtest"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "valtests" ("email", "email_confirmation", "name", "age", "password", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "mnb"], ["email_confirmation", ""], ["name", "mnb"], ["age", 54], ["password", "23435345"], ["phone_number", "8888888888"], ["created_at", "2016-11-30 10:49:06.137197"], ["updated_at", "2016-11-30 10:49:06.137197"]]
+  [1m[35m (295.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/valtests/24
+Completed 302 Found in 312ms (ActiveRecord: 296.4ms)
+
+
+Started GET "/valtests/24" for 127.0.0.1 at 2016-11-30 16:19:06 +0530
+Processing by ValtestsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mValtest Load (0.3ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 24]]
+  Rendered valtests/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 16:19:11 +0530
+Processing by ValtestsController#index as HTML
+  [1m[35mValtest Load (0.4ms)[0m  SELECT "valtests".* FROM "valtests"
+  Rendered valtests/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/valtests/new" for 127.0.0.1 at 2016-11-30 16:20:15 +0530
+Processing by ValtestsController#new as HTML
+  Rendered valtests/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 61ms (Views: 42.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/valtests" for 127.0.0.1 at 2016-11-30 16:20:52 +0530
+Processing by ValtestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"79E5xw0F5bmJ4iFzNV4IEA3bA6biOApKNMxTJe1Hs4kUBCNn9/kpDIJ0eVLwH1BjXy4LGwJbOWP+jSCOON0pHg==", "valtest"=>{"name"=>"madhu", "age"=>"24", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"1234567890"}, "commit"=>"Create Valtest"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered valtests/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 52ms (Views: 40.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 16:21:28 +0530
+Processing by ValtestsController#index as HTML
+  [1m[36mValtest Load (0.7ms)[0m  [1mSELECT "valtests".* FROM "valtests"[0m
+  Rendered valtests/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 56ms (Views: 49.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/valtests/new" for 127.0.0.1 at 2016-11-30 16:21:31 +0530
+Processing by ValtestsController#new as HTML
+  Rendered valtests/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/valtests" for 127.0.0.1 at 2016-11-30 16:21:44 +0530
+Processing by ValtestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7pMfFbTGeJV2Zg8dYuVeeX/U/yg/VUr/4MI+aYZ6EWgVRgW1Tjq0IH3wVzynpAYKLSH3ld82edYqg03CU+CL/w==", "valtest"=>{"name"=>"mnb", "age"=>"23", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "phone_number"=>"1234567890"}, "commit"=>"Create Valtest"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "valtests" ("email", "email_confirmation", "name", "age", "password", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "mnb123@gamil.com"], ["email_confirmation", ""], ["name", "mnb"], ["age", 23], ["password", "hfghb dvg"], ["phone_number", "1234567890"], ["created_at", "2016-11-30 10:51:44.143579"], ["updated_at", "2016-11-30 10:51:44.143579"]]
+  [1m[35m (256.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/valtests/25
+Completed 302 Found in 268ms (ActiveRecord: 257.7ms)
+
+
+Started GET "/valtests/25" for 127.0.0.1 at 2016-11-30 16:21:44 +0530
+Processing by ValtestsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mValtest Load (0.3ms)[0m  [1mSELECT  "valtests".* FROM "valtests" WHERE "valtests"."id" = ? LIMIT 1[0m  [["id", 25]]
+  Rendered valtests/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/valtests" for 127.0.0.1 at 2016-11-30 16:22:06 +0530
+Processing by ValtestsController#index as HTML
+  [1m[35mValtest Load (0.4ms)[0m  SELECT "valtests".* FROM "valtests"
+  Rendered valtests/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.4ms)

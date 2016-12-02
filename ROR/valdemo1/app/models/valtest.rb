@@ -1,12 +1,18 @@
 class Valtest < ActiveRecord::Base
-  validates :email, uniqueness: true, length: {
-    minimum: 5,
-    maximum: 25,
-    too_short: "must have at least %{count} words",
-    too_long: "must have at most %{count} words"
-  }
-  validates :name, presence: true
-  validates :phone_number, presence: true
-  validates :age, presence: true
-  validates :password, presence: true
+  
+  validates :name, :phone_number, :age, :password, :email, presence: true
+  
+  validates :age,:phone_number, numericality: { only_integer: true }
+  
+  validates :name, format: { with: /\A[a-zA-Z ]+\z/,
+  message: "only allows letters" }
+ 
+  validates :phone_number, length: { is: 10,  
+    message: "Phone Number exact 10 digit"}
+
+    validates :email, confirmation: true
+
+  before_validation do
+    self.email = name + "123@gamil.com" unless name.blank?
+  end
 end
