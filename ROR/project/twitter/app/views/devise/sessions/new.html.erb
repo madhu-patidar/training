@@ -3,18 +3,18 @@
     <div class="qx1">
       <h2 style="text-align:center">Log in</h2>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="col-xs-12 field" algin="left">
-          <%= f.label :email %>
+        <div class="col-xs-12 ">
+          <%= f.label :email, style:"margin-left:20px" %>
           <%= f.email_field :email, autofocus: true, class: "form-control" %>  
         </div>
 
-          <div class="col-xs-12 field">
-            <%= f.label :password %>
+          <div class="col-xs-12 ">
+            <%= f.label :password ,style:"margin-left:20px"%>
             <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
           </div>
 
           <% if devise_mapping.rememberable? -%>
-            <div class="field" style="text-align:center">
+            <div class="" style="text-align:center">
               <%= f.check_box :remember_me %>
               <%= f.label :remember_me %>
             </div>

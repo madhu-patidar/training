@@ -1,0 +1,21 @@
+ <% @posts.each do |post| %>
+        <li class="qf b aml" id="show-post">
+          <a class="qj" href="#">
+            <%= image_tag "avatar-fat.jpg",  class: "qh cu" %>
+          </a>
+          <div class="qg">
+            <div class="aoc">
+              <div class="qn">
+                <small class="eg dp"><%= time_ago_in_words(post.created_at)  %> ago</small>
+                <h5><%= post.user.name %></h5>
+              </div>
+              <p>
+                <%= post.post_body %>
+                <%if current_user.id == post.user.id %>
+                <%=link_to "Delete",post_path(post), method: :delete, class: 'delete_post', confirm: "Are you sure ?", remote: true%>
+                <%end%>
+              </p>
+            </div>
+          </div>
+        </li>
+      <% end %>

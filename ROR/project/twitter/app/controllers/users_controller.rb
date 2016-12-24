@@ -7,26 +7,33 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @posts = Post.all
+    @post = Post.new
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
   def new
     @user = User.new
+
   end
 
   # GET /users/1/edit
   def edit
+    @user = User.find(params[:id])
   end
 
   # POST /users
   # POST /users.json
+  
   def create
-    @user = User.new(user_params)
+    @posts = Post.all
+    @user = User.create(user_params)
 
     respond_to do |format|
       if @user.save
@@ -56,11 +63,17 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
+
+    @user = User.find(current_user.id)
     @user.destroy
     respond_to do |format|
       format.html { redirect_to  new_user_session, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  def show_users
+    @users = User.all
+    
   end
 
   private
@@ -71,6 +84,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email)
+      params.require(:user).permit(:email,:name)
     end
 end

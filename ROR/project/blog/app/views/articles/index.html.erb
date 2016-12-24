@@ -1,0 +1,24 @@
+<h1>HELLo</h1>
+  <table>
+<tr>
+  <td>Title</td>
+  <td>Text</td>
+ <%= link_to 'new user', new_article_path, id: "new-link", remote: true %>
+  
+  <% @articles.each do |f|%>
+    
+    <tr>
+      <td>
+    <%= f.title %>
+    </td>
+    <td>
+   
+    <%= f.text %>
+    </td>
+    <td>
+    
+    <%= link_to 'delete', article_path(, id: "new-link", remote: true %>
+     </td>
+  </tr>
+  <%end%>
+</table>

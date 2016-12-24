@@ -1,0 +1,18 @@
+
+<%= link_to "New Articale", new_artical_path%>
+<table>
+  <tr>
+    <th>Title<th>
+    <th>Text</th>
+  </tr>
+  <%@articals.each do |artical|%>
+    <tr>
+      <td><%= artical.title%></td>
+      <td><%=artical.text%></td>
+      <td><%= link_to "Edit", edit_artical_path(artical)  %>
+      <td><%= link_to "Show Articale", artical_path(artical) %> </td>
+      <td><%= link_to "Delete Articale", artical_path(artical), method: :delete  %> </td>
+
+    </tr>
+  <%end%> 
+</table>

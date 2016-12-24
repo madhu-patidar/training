@@ -1,0 +1,12 @@
+<h1>Posts#show</h1>
+<%= form_for @post do |f| %>
+  <p>
+    <%= f.label :post_body %><br>
+    <%= f.text_field :post_body %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 

@@ -1,0 +1,17 @@
+<%@users.each do |user| %>
+  
+    <li class="qf alm">
+      <a class="qj" href="#">
+        <%= image_tag "avatar-fat.jpg", class:"aoh qh cu",style:"margin-top:1px"  %>
+      </a>
+      <div class="qg">
+        <strong><%=user.name%></strong> 
+        <div class="aoa">
+          <button class="cg ts fx">
+            <span class="h vc"></span> Follow
+          </button>
+        </div>
+      </div>
+    </li>
+
+<%end%>

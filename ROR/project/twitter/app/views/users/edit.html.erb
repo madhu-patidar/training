@@ -1,6 +1,28 @@
-<h1>Editing User</h1>
+<h1 style="text-align:center">Edting User</h1>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<div class="gn lbg">
+  <div class="qv rc aog1 alu">
+    <div class="qx1">
+      <%= form_for(@user) do |f| %>
+        <div class="col-xs-12 field">
+          <%= f.label :name,style:"margin-left:20px" %>
+          <%= f.text_field :name, autofocus: true, class: "form-control" %>
+        </div>
+
+        <div class="col-xs-12 field">
+          <%= f.label :email,style:"margin-left:20px" %> <br />
+          <%= f.email_field :email, autofocus: true, class: "form-control" %>
+        </div>
+
+        <div class="actions", style="text-align:center;margin-top:20px">
+          <%= f.submit "Update",class: "btn btn-default" %>
+         </div>
+
+      <% end %>
+      <div style="text-align:center;margin-top:20px">
+        <%= link_to "Back", :back %>
+      </div>
+    </div>
+  </div>
+</div>
