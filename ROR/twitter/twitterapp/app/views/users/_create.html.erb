@@ -1,0 +1,21 @@
+<div class = "panel panel-info">
+  <div class = "panel-heading">
+    <h3>Public Tweets</h3>
+  </div>
+  <div class = "panel-body" id='show-post'>
+    <% @tweets.each do |post| %>
+      <div id="show-post-timeline ">
+        <span class="name col-lg-10" style="color:inherit;font-size:150%"><b><%= @user.name.capitalize %></b></span> 
+        <span class="time" ><%= time_ago_in_words(post.created_at) %> ago</span>
+        <br><br>
+        <p id="show-post", class="col-lg-12 ", style="font-size:120%" >&nbsp<%= post.body %>
+        <br>
+        <br>
+        <% if post.user_id == current_user.id %>
+        &nbsp<%=link_to "Delete",  tweet_path(post), method: :delete,remote: true %>
+        <% end %></p>
+        <hr>
+      </div>
+    <% end %>
+  </div>
+</div>

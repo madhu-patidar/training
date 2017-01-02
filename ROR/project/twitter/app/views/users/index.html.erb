@@ -464,20 +464,31 @@
     </div>
 
     <div class="gz">
-      <ul class="ca qo anx">
-
       <%= form_for @post, remote: true, :html => {:id => "sm-post"} do |f| %>
+      <ul class="ca qo anx post-list">
         <li class="qf b aml">
           <div class="input-group">
-             <%= f.text_field :post_body,class: "form-control", placeholder:"Post" %>
+             <%= f.text_field :post_body,class: "form-control",laceholder:"Post"%>
             <div class="fj">
-              <%= f.submit class: "btn  btn-default btn-xs"%>
+              <%= f.submit class: "btn  btn-default btn-xs" %>
             </div>
           </div>
         </li>
       <%end%>
+      <% if @post.errors.any? %>
+        <div id="error_explanation">           
+          <li class="qf b aml">
+            <% @post.errors.full_messages.each do |msg| %>
+              <strong><%= msg %></strong>
+            <% end %>
+          </li>
+        </div>
+      <% end %>
 
-     <%=render "create"%>
+      
+        <%=render "post", post: @post%>
+    
+
 
       <li class="qf b aml">
         <a class="qj" href="#">
@@ -588,9 +599,10 @@
       </ul>
     </div>
     <div class="gn">
-      <div class="alert pv alert-dismissible ss" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <p id="notice"><%= notice %></p>
-        <a class="pr" href="#"> Visit your profile!</a> 
+      <div role="alert">
+        
+         <%= bootstrap_flash %>
+         
       </div>
 
       <div class="qv rc alu ss">

@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     @user = User.find(current_user.id)
     @post = @user.posts.create(post_params)
     respond_to do |format|
-      format.html {redirect_to users_path(@post)}
+      format.html {redirect_to users_path(@post),notice: 'user was successfully posted.'}
       format.js { render :layout => false }
     end
   end
