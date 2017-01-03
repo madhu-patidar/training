@@ -24,7 +24,9 @@
         <p>
           <%= post.post_body %>
           <%if current_user.id == post.user.id %>
-          <%=link_to "Delete",post_path(post), method: :delete, class: 'delete_post', remote: true%>
+          <P>
+            <%=link_to "Delete",post_path(post), method: :delete, class: 'delete_post', remote: true%>
+          </P>
           <%end%>
         </p>
       </div>

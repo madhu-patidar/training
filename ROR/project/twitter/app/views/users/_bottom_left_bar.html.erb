@@ -1,0 +1,12 @@
+<div class="qv rc sm sp">
+        <div class="qw">
+          <h5 class="ald">Photos <small>· <a href="#">Edit</a></small></h5>
+          <div data-grid="images" data-target-height="150">
+            <% 5.upto(10) do |i| %>
+              <div style="margin-bottom: 10px; display: inline-block; vertical-align: bottom;">
+                <%= image_tag "instagram_#{i}.jpg", style: "width: 117px; height: 118px;" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>

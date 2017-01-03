@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170102134842) do
+ActiveRecord::Schema.define(version: 20170103155341) do
+
+# Could not dump table "comments" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "tweets", force: :cascade do |t|
     t.text     "body"

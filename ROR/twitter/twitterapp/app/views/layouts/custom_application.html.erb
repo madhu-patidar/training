@@ -37,41 +37,30 @@
     <![endif]-->
   </head>
   <body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Witter</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><%= link_to('Home', users_path) %></li>
-      
-      <li><%= link_to('Profile', user_path(current_user.id)) %></li>
-      
-      <li><%= link_to('Edit Profile', edit_user_path(current_user.id)) %></li>
-    
-    </ul>
-   
-    <ul class="nav navbar-nav navbar-right" style="padding-right:30px">
-      <%if  user_signed_in? %>
-        <li>
-          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</nav>
-
-    
-
-    <div class="container">
-      <div class="row" style="margin-left:-130px">
-        
-        
-          <%= yield %>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Twitter</a>
         </div>
-      </div><!--/row-->
-    </div> <!-- /container -->
-
+        <ul class="nav navbar-nav">
+          <li class="active"><%= link_to('Home', tweets_path) %></li>
+          
+          <li><%= link_to('Profile', user_path(current_user.id)) %></li>
+          
+          <li><%= link_to('Edit Profile', edit_user_path(current_user.id)) %></li>
+        
+        </ul>
+       
+        <ul class="nav navbar-nav navbar-right" style="padding-right:30px">
+          <%if  user_signed_in? %>
+            <li>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    
+    <%= yield %>   
   </body>
 </html>

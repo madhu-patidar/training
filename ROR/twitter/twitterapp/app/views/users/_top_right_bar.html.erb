@@ -1,0 +1,32 @@
+ <div class = "panel panel-info">
+    <div class = "panel-heading">
+      <% if @user.id == current_user.id %>
+      <h4>Who to follow </h4>
+      <%=link_to "VIEW All", users_path %>
+      <% else %>
+      <h4><%= @user.name.capitalize %> Twitter Profile</h4>
+      <% end %>
+      </div>
+      <div class = "panel-body">
+        <br>
+        <% if current_user.avatar.url.present? %>
+        <%= image_tag(@user.avatar.url(:thumb), class: 'img-rounded',style: "margin-left:75px") %>
+        <% else %>
+        <%= image_tag('default.png',size: '100x100',class: 'img-rounded') %>
+        <% end %>
+        <h4 style="text-align:center;"><span class="name"><%= @user.name.capitalize %></span></h4>
+        <br>
+        <table class = "table ">
+          <tr>
+            <td><%= link_to 'TWEETS' ,tweet_path(@user) %></td>
+            <td><%= link_to 'FOLLOWING' ,tweet_path(@user) %></td>
+            <td><%= link_to 'FOLLOWER' ,tweet_path(@user) %></td>
+          </tr>
+            <tr class = "success">
+            <td><h3 style="color:blue;"><%= @user.tweets.size %></h3></td>
+            <td><h3 style="color:blue;"><%= @user.tweets.size %></h3></td>
+            <td><h3 style="color:blue;"><%= @user.tweets.size %></h3></td>
+          </tr>
+        </table>
+      </div>
+    </div>

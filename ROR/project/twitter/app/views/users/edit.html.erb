@@ -1,28 +1,49 @@
-<h1 style="text-align:center">Edting User</h1>
 
-
-<div class="gn lbg">
-  <div class="qv rc aog1 alu">
-    <div class="qx1">
-      <%= form_for(@user) do |f| %>
-        <div class="col-xs-12 field">
-          <%= f.label :name,style:"margin-left:20px" %>
-          <%= f.text_field :name, autofocus: true, class: "form-control" %>
+<div class="by amt">
+  <div class="gc">
+    <%= render "top_left_bar"%>
+    <%=render "meddle_left_bar"%>
+    <%=render "bottom_left_bar"%>
+  </div>
+  <div class="gz">
+    <ul class="ca qo anx post-list">
+      <li class="qf b aml">
+        <%= form_for(@user) do |f| %>
+          <div class="col-xs-12 field">
+            <%= f.label :name,style:"margin-left:20px" %>
+            <%= f.text_field :name, autofocus: true, class: "form-control" %>
+          </div>
+          <div class="col-xs-12 field">
+            <%= f.label :email,style:"margin-left:20px" %> <br />
+            <%= f.email_field :email, autofocus: true, class: "form-control" %>
+          </div>
+          <div class="actions", style="text-align:center;margin-top:20px">
+            <%= f.submit "Update",class: "btn btn-default" %>
+           </div>
+        <% end %>
+        <div style="text-align:center;margin-top:20px">
         </div>
-
-        <div class="col-xs-12 field">
-          <%= f.label :email,style:"margin-left:20px" %> <br />
-          <%= f.email_field :email, autofocus: true, class: "form-control" %>
-        </div>
-
-        <div class="actions", style="text-align:center;margin-top:20px">
-          <%= f.submit "Update",class: "btn btn-default" %>
-         </div>
-
-      <% end %>
-      <div style="text-align:center;margin-top:20px">
-        <%= link_to "Back", :back %>
+      </li>
+    </ul>
+  </div>
+    <div class="gn">
+      <div role="alert">
+         <%= bootstrap_flash %>
       </div>
+
+      <%=render "top_right_bar"%>
+       
+      <%= render "meddle_right_bar"%> 
+
+      <%= render "bottom_right_bar"%>
     </div>
   </div>
 </div>
+
+<script>
+  $(function(){
+    if (window.BS&&window.BS.loader&&window.BS.loader.length) {
+      while(BS.loader.length){(BS.loader.pop())()}
+    }
+  })
+</script>

@@ -1,0 +1,27 @@
+<div class="col-sm-3">
+  <%=render "top_left_bar"%>
+
+  <%=render "bottom_left_bar"%>
+   
+</div>
+<div class="col-lg-6" >
+  <%= bootstrap_flash %>
+  <div class= "panel panel-info">
+    <div class = "panel-heading">
+      <h3>Post a Tweet</h3>
+    </div>
+    <br>
+    <div class = "panel-body">
+      <%= form_for @tweet do |f| %>
+        <%= f.text_area :body, size: "60x3",style: 'border-radius: 10px;' %>
+        <br><br>
+        <%= f.submit "Tweet", class: 'btn btn-primary' %>
+        <%= f.submit "Upload Image", class: 'btn btn-default' %>
+      <% end %>
+    </div>
+  </div>
+  <%=render "tweets"%>
+</div>
+<div class="col-sm-3">
+  <%=render "users/top_right_bar"%>
+</div>

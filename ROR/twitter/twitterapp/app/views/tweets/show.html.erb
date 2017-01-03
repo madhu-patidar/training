@@ -1,0 +1,53 @@
+<div class="col-sm-3">
+  <%=render "tweets/top_left_bar"%>
+  <%=render "tweets/bottom_left_bar"%>
+</div>
+<div class="col-lg-6" >
+  <%= bootstrap_flash %>
+  <div class= "panel panel-info">
+    <div class = "panel-heading">
+      <h3>Comment on Tweet</h3>
+    </div>
+    <br>
+    <div class = "panel-body" id='show-tweet'>
+      <div id="show-tweet-timeline ">
+        <span class="name col-lg-10" style="color:inherit;font-size:150%"><b><%= @user.name.capitalize %></b></span> 
+        <span class="time" ><%= time_ago_in_words(@tweet.created_at) %> ago</span>
+        <br><br>
+        <p id="show-tweet", class="col-lg-12 ", style="font-size:120%" >&nbsp<%= @tweet.body %>
+        <br>
+        <br>
+        <% if @tweet.user_id == current_user.id %>
+        &nbsp<%=link_to "Delete",  tweet_path(@tweet), method: :delete,remote: true, style: "color:blue" %>
+        <% end %>
+        </p>
+      </div>
+    </div>
+      <hr>
+      <% @tweet.comments.each do |comment| %>
+        <div id="show-tweet-timeline ">
+          <span class="name col-lg-10" style="color:inherit;font-size:110%"><b><%= comment.user.name.capitalize %></b></span> 
+          <br><br>
+          <p id="show-tweet", class="col-lg-12 ", style="font-size:120%" >
+            &nbsp<%= comment.body %><br><br>
+            <% if comment.tweet.user_id == current_user.id %>
+              &nbsp<%=link_to "Delete",  tweet_path(@tweet), method: :delete,remote: true, style: "color:blue" %><hr>
+            <% end %>
+          </p><hr>
+        </div>
+      <% end %>
+      <hr>
+      <div class = "panel-body">
+        <%=form_for ([@tweet, @tweet.comments.build]) do |f| %>
+          <%= f.text_area :body, size: "65x3",style: 'border-radius: 10px;' %>
+          <br><br>
+          <%= f.submit "Comment", class: 'btn btn-primary' %>
+          <%= f.submit "Upload Image", class: 'btn btn-default' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="col-sm-3">
+    <%=render "users/top_right_bar"%>
+  </div>

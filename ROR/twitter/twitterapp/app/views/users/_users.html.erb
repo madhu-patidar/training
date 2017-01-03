@@ -1,0 +1,16 @@
+<div class = "panel panel-info">
+  <div class = "panel-heading">
+    <h3>Who to follow</h3>
+    <h6>Follow more people from the suggestions below, tailored just for you.</h6>
+  </div>
+  <div class = "panel-body" id='show-post'>
+    <% @users.each do |user| %>
+      <div id="show-post-timeline ">
+        <span class="name col-lg-10" style="color:inherit;font-size:150%"><b><%= user.name.capitalize %></b></span> 
+        <br>
+        <br>
+        <hr>
+      </div>
+    <% end %>
+  </div>
+</div>
