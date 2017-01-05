@@ -1,15 +1,15 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:destroy, :show]
+  before_action :set_tweet, only: [:destroy, :show,:update]
   layout "custom_application"
   
   def index
       @tweets = Tweet.all
-      @tweet = Tweet.new
       @user = User.find(current_user.id) 
+      @tweet = @user.tweets.build
   end
 
   def new
-    @tweet = Tweet.new 
+    @tweet = Tweet.new
   end
   def show
     @user = User.find(current_user.id)
@@ -24,10 +24,20 @@ class TweetsController < ApplicationController
   def edit
     @tweet = Tweet.find(params[:id])
   end
- 
+ def update
+    respond_to do |format|
+      if @tweet.update(tweet_params)
+        format.html { redirect_to @tweet, notice: 'User was successfully updated.' }
+        format.json { render :show, status: :ok, location: @tweet }
+      else
+        format.html { render :edit }
+        format.json { render json: @tweet.errors, status: :unprocessable_entity }
+      end
+    end
+  end
   def destroy
     @tweet.destroy
-   redirect_to users_path
+    redirect_to tweets_path
   end
  
   private
@@ -37,6 +47,6 @@ class TweetsController < ApplicationController
     end
     
     def tweet_params
-      params.require(:tweet).permit(:body)
+      params.require(:tweet).permit(:body,:image)
     end
 end

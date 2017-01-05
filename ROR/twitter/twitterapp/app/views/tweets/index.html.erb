@@ -6,20 +6,8 @@
 </div>
 <div class="col-lg-6" >
   <%= bootstrap_flash %>
-  <div class= "panel panel-info">
-    <div class = "panel-heading">
-      <h3>Post a Tweet</h3>
-    </div>
-    <br>
-    <div class = "panel-body">
-      <%= form_for @tweet do |f| %>
-        <%= f.text_area :body, size: "60x3",style: 'border-radius: 10px;' %>
-        <br><br>
-        <%= f.submit "Tweet", class: 'btn btn-primary' %>
-        <%= f.submit "Upload Image", class: 'btn btn-default' %>
-      <% end %>
-    </div>
-  </div>
+  <%=render "new"%>
+  
   <%=render "tweets"%>
 </div>
 <div class="col-sm-3">

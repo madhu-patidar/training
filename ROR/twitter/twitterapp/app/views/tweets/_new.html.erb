@@ -1,0 +1,14 @@
+<div class= "panel panel-info">
+    <div class = "panel-heading">
+      <h3>Post a Tweet</h3>
+    </div>
+    <br>
+    <div class = "panel-body">
+      <%= form_for @tweet do |f| %>
+        <%= f.text_area :body, size: "60x3",style: 'border-radius: 10px;' %>
+        <br><br>
+        <%= f.file_field :image %>
+        <%= f.submit "Tweet", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>

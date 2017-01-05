@@ -1,13 +1,25 @@
 <div class="col-lg-3">
   <%=render "tweets/top_left_bar"%>
-
   <%=render "tweets/bottom_left_bar"%>
 </div>
 <div class="col-lg-5" >
   <%= bootstrap_flash %>
-  
-  <%=render "users"%>
+  <% @users.each do |user| %>
+    <% if current_user.id != user.id %>
+      <div id="show-tweet-timeline " class="col-lg-5">
+        <span class="name col-lg-5" style="color:inherit;font-size:150%"><b><%= user.name.capitalize %></b></span> 
+        <span class="time" ></span>
+        <br><br>
+        <br>
+        <br>
+        &nbsp<%= image_tag(user.avatar.url(:thumb), class: 'img-rounded',style: "margin-left:15px") %>
+        <%=render partial: "components/follow_button", object: user, as: 'user'%>
+        <hr>
+      </div>
+    <% end %>
+  <% end %>
 </div>
 <div class="col-sm-3">
   <%=render "users/top_right_bar"%>
 </div>
+

@@ -13,8 +13,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @tweet = Tweet.find(params[:tweet_id])
+    @comment = @tweet.comments.find(params[:id])
     @comment.destroy
-    redirect_to comment_path
+    redirect_to tweet_path(@tweet)
   end
    def comment_params
       params.require(:comment).permit(:body)

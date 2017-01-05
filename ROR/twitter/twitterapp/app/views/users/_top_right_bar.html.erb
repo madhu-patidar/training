@@ -19,13 +19,13 @@
         <table class = "table ">
           <tr>
             <td><%= link_to 'TWEETS' ,tweet_path(@user) %></td>
-            <td><%= link_to 'FOLLOWING' ,tweet_path(@user) %></td>
-            <td><%= link_to 'FOLLOWER' ,tweet_path(@user) %></td>
+            <td><%= link_to 'FOLLWING' ,tweet_path(@user) %></td>
+            <td><%= link_to 'FOLLWERS' ,tweet_path(@user) %></td>
           </tr>
             <tr class = "success">
             <td><h3 style="color:blue;"><%= @user.tweets.size %></h3></td>
-            <td><h3 style="color:blue;"><%= @user.tweets.size %></h3></td>
-            <td><h3 style="color:blue;"><%= @user.tweets.size %></h3></td>
+            <td><h3 style="color:blue;"><%= @user.follwing.count %></h3></td>
+            <td><h3 style="color:blue;"><%= @user.follwers.count %></h3></td>
           </tr>
         </table>
       </div>

@@ -1,2 +1,2 @@
-$('#show-post').html("<%= escape_javascript(render partial: 'users/create') %>");
-  
+$('#show-<%=tweet[:id]%>').html("<%= escape_javascript(render partial: 'tweets/tweets') %>");
+  // $('.post-list li:eq(0)').after('<%= escape_javascript(render "users/post", post: @post) %>');

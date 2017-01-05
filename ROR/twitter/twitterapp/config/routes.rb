@@ -1,8 +1,18 @@
 Rails.application.routes.draw do
   
 
+  get 'relationships/create'
+
+  get 'relationships/destroy'
+
   devise_for :users
-  resources :users 
+  resources :users do
+    member do
+      get :following,:follwers
+    end
+  end
+  resources :relationships
+  
   resources :tweets do
     resources :comments
   end

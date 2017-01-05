@@ -7,16 +7,13 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all 
-    @tweets = Tweet.all
-    @tweet = Tweet.new
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-    @tweet = Tweet.new
-    @tweets = Tweet.all
+    @tweet = Tweet.find_by(user_id: params[:id])
   end
 
   # GET /users/new
@@ -26,12 +23,13 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+     @user = User.find(params[:id])
   end
 
   # POST /users
   # POST /users.json
   def create
-     @tweets = Tweet.all
+    @tweets = Tweet.all
     @user = User.new(user_params)
 
     respond_to do |format|

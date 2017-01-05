@@ -1,9 +1,10 @@
  <div class="well sidebar-nav">
-  <h3>Sidebar</h3>
-  <ul class="nav nav-list">
-    <li class="nav-header">Sidebar</li>
-    <li><%= link_to "Link1", "/path1"  %></li>
-    <li><%= link_to "Link2", "/path2"  %></li>
-    <li><%= link_to "Link3", "/path3"  %></li>
+  <h3></h3>
+  <ul class="nav nav-pills nav-stacked">
+    <li><%=link_to "VIEW All", users_path,style: "color:blue;text-align:center"%></li>
+    <li><%= link_to "TWEETS", tweets_path,style: "color:blue;text-align:center"%></li>
+    <li><%= link_to "IMAGES", "/path2",style: "color:blue;text-align:center"%></li>
+    <li><%= link_to "HELP", "/path3",style: "color:blue;text-align:center"%></li>
+     <li><%= link_to "ABOUT US", "/path3" ,style:"color:blue;text-align:center"%></li>
   </ul>
 </div><!--/.well -->
