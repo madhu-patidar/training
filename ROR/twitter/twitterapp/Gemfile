@@ -18,6 +18,8 @@ gem 'devise-bootstrap-views'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem "pry"
+gem 'omniauth-facebook'
+gem "omniauth-google-oauth2"
 
 gem 'awesome_print'
 gem "paperclip", "~> 4.2"
