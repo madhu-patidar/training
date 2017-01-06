@@ -22,7 +22,7 @@ class TweetsController < ApplicationController
     redirect_to tweets_path(@user)
   end
   def edit
-    @tweet = Tweet.find(params[:id])
+    @tweet = Tweet.find_by(params[:id])
   end
  def update
     respond_to do |format|

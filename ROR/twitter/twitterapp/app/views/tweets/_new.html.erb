@@ -5,10 +5,13 @@
     <br>
     <div class = "panel-body">
       <%= form_for @tweet do |f| %>
-        <%= f.text_area :body, size: "60x3",style: 'border-radius: 10px;' %>
-        <br><br>
-        <%= f.file_field :image %>
-        <%= f.submit "Tweet", class: 'btn btn-primary' %>
+        <%= f.text_area :body, size: "79x3",style: 'border-radius: 10px;margin-bottom:12px' %>
+        <div class="col-lg-5">
+          <%= f.file_field :image,style: '10px;margin-bottom:12px' %>
+        </div>
+        <div class="col-lg-6">
+          <%= f.submit "Tweet", class: 'btn btn-primary' %>
+        </div>
       <% end %>
     </div>
   </div>

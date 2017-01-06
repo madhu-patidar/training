@@ -17,7 +17,7 @@
          &nbsp<%=link_to( "",tweet_path(tweet),class: "glyphicon glyphicon-comment", style: "color:blue") %> &nbsp<%= tweet.comments.size %>
          &nbsp<%=link_to "", tweets_path,class: "glyphicon glyphicon-heart", style: "color:black" %> &nbsp<%= tweet.comments.size %>
         <% if tweet.user_id == current_user.id %>
-        &nbsp<%=link_to " ",tweet_path(tweet), remote: true, method: :delete,style: "color:red",class: "glyphicon glyphicon-trash"%>
+        &nbsp<%=link_to " ",tweet_path(tweet), method: :delete,style: "color:red",class: "glyphicon glyphicon-trash"%>
         <% end %>
         
         </p>

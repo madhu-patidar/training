@@ -18,7 +18,7 @@
         <br>
         <br>
         <% if @tweet.user_id == current_user.id %>
-        &nbsp<%=link_to "Delete",  tweet_path(@tweet), method: :delete,remote: true, style: "color:blue" %>
+        &nbsp<%=link_to "Delete",  tweet_path(@tweet), method: :delete, style: "color:blue" %>
         <% end %>
         </p>
       </div>
@@ -31,7 +31,7 @@
           <p id="show-tweet", class="col-lg-12 ", style="font-size:120%" >
             &nbsp<%= comment.body %><br><br>
             <% if comment.tweet_id == comment.tweet.id %>
-              &nbsp<%=link_to "Delete", [comment.tweet, comment], method: :delete,remote: true, style: "color:blue" %><hr>
+              &nbsp<%=link_to "", [comment.tweet, comment], method: :delete,style: "color:blue",class: "glyphicon glyphicon-trash" %><hr>
             <% end %>
           </p><hr>
         </div>
