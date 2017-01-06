@@ -1,0 +1,8 @@
+<div class = "panel-body">
+  <%=form_for ([@tweet, @tweet.comments.build]) do |f| %>
+    <%= f.text_area :body, size: "65x3",style: 'border-radius: 10px;' %>
+    <br><br>
+    <%= f.submit "Comment", class: 'btn btn-primary' %>
+    <%= f.submit "Upload Image", class: 'btn btn-default' %>
+  <% end %>
+</div>
