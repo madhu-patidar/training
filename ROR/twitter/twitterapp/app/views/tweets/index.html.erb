@@ -1,15 +1,27 @@
 <div class="col-sm-3">
-  <%=render "top_left_bar"%>
+  <%=render "users/top_left_bar"%>
 
   <%=render "bottom_left_bar"%>
    
 </div>
 <div class="col-lg-6" >
   <%= bootstrap_flash %>
-  <%=render "new"%>
-  
-  <%=render "tweets"%>
+  <%=render "form"%>
+
+  <div class = "panel panel-info">
+    <div class = "panel-heading">
+      <h3>Public Tweets</h3>
+    </div>
+    <div class = "panel-body" id='show-tweet'>
+      <% @tweets.each do |tweet| %>
+        <%= render "tweet", tweet: tweet %>
+         <% end %>
+    </div>
+        
+     
+  </div>
+
 </div>
 <div class="col-sm-3">
-  <%=render "users/top_right_bar"%>
+  <%= render "users/top_right_bar" %>
 </div>

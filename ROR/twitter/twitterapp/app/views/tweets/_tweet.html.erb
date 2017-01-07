@@ -1,0 +1,19 @@
+
+<div id="show-<%=tweet.id%>">
+  <span class="name col-lg-9" style="color:inherit;font-size:150%"><b><%= tweet.user.name.capitalize %></b></span> 
+  <span class="time"><%= time_ago_in_words(tweet.created_at)  %></span>
+  <br><br>
+  <% if tweet.image_file_name != nil %>
+    <%= image_tag(tweet.image.url(:thumb), class: 'img-rounded',style: "margin-left:110px") %>
+  <% end %>
+  <p id="show-tweet", class="col-lg-12 ", style="font-size:120%" >&nbsp<%= tweet.body %>
+  <br>
+  <br>
+   &nbsp<%=link_to( "",tweet_path(tweet),class: "glyphicon glyphicon-comment", style: "color:blue") %> &nbsp<%= tweet.comments.count %>
+   &nbsp<%=link_to "", tweets_path,class: "glyphicon glyphicon-heart", style: "color:black" %> &nbsp<%= tweet.comments.size %>
+  <% if @tweet.user_id == current_user.id %>
+    &nbsp<%=link_to " ",tweet_path(tweet), method: :delete, style: "color:red",class: "glyphicon glyphicon-trash", remote: true%>
+  <% end %>
+  </p>
+  <hr>
+</div>

@@ -6,7 +6,6 @@ class CommentsController < ApplicationController
     @comment = @tweet.comments.new(comment_params)
     @comment.user_id = current_user.id
     @comment.save 
-    redirect_to tweet_path(@tweet)
   end
 
   def update
@@ -16,7 +15,11 @@ class CommentsController < ApplicationController
     @tweet = Tweet.find(params[:tweet_id])
     @comment = @tweet.comments.find(params[:id])
     @comment.destroy
-    redirect_to tweet_path(@tweet)
+    respond_to do |format|
+      format.html { redirect_to tweet_path(@tweet), notice: 'tweet successfully Deleted.' }
+      format.js { render :layout => false ,notice: 'tweet successfully Deleted.' }
+    end
+
   end
    def comment_params
       params.require(:comment).permit(:body)

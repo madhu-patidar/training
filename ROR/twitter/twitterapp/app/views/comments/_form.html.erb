@@ -1,5 +1,5 @@
 <div class = "panel-body">
-  <%=form_for ([@tweet, @tweet.comments.build]) do |f| %>
+  <%=form_for [@tweet, @tweet.comments.build], remote: true do |f| %>
     <%= f.text_area :body, size: "65x3",style: 'border-radius: 10px;' %>
     <br><br>
     <%= f.submit "Comment", class: 'btn btn-primary' %>

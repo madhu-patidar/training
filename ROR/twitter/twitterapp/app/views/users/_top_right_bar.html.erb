@@ -10,20 +10,20 @@
       <div class = "panel-body">
         <br>
         <% if current_user.avatar.url.present? %>
-        <%= image_tag(@user.avatar.url(:thumb), class: 'img-rounded',style: "margin-left:75px") %>
+        <%= image_tag(@user.image, class: 'img-rounded',style: "margin-left:75px") %>
         <% else %>
-        <%= image_tag('default.png',size: '100x100',class: 'img-rounded') %>
+        <%= image_tag "twitter-128.png", size: '100x100',class: 'img-rounded' %>
         <% end %>
         <h4 style="text-align:center;"><span class="name"><%= @user.name.capitalize %></span></h4>
         <br>
         <table class = "table ">
           <tr>
-            <td><%= link_to 'TWEETS' ,tweet_path(@user) %></td>
-            <td><%= link_to 'FOLLWING' ,tweet_path(@user) %></td>
-            <td><%= link_to 'FOLLWERS' ,tweet_path(@user) %></td>
+            <td><%= link_to 'TWEETS' ,tweets_path %></td>
+            <td><%= link_to 'FOLLWING' ,users_path %></td>
+            <td><%= link_to 'FOLLWERS' ,users_path %></td>
           </tr>
             <tr class = "success">
-            <td><h3 style="color:blue;"><%= @user.tweets.size %></h3></td>
+            <td><h3 style="color:blue;"><%= @user.tweets.count %></h3></td>
             <td><h3 style="color:blue;"><%= @user.follwing.count %></h3></td>
             <td><h3 style="color:blue;"><%= @user.follwers.count %></h3></td>
           </tr>
