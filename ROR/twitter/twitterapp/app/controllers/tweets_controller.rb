@@ -1,6 +1,9 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:destroy,:update,:show]
+  protect_from_forgery with: :exception
   layout "custom_application"
+  
+  before_action :set_tweet, only: [:destroy,:update,:show]
+  
   
   def index
       @tweets = Tweet.all
@@ -18,8 +21,15 @@ class TweetsController < ApplicationController
 
   def create
     @user = User.find(current_user.id)
-    @tweet = @user.tweets.create(tweet_params)
-    redirect_to tweets_path
+    @tweet = @user.tweets.new(tweet_params)
+    
+    respond_to do |format|
+      if @tweet.save
+        format.html { redirect_to tweets_path, notice: 'User was successfully Tweet.' }
+      else
+        format.html { redirect_to tweets_path,  notice: 'Tweet can not be blank!!.'}
+      end
+    end
   end
 
   def edit

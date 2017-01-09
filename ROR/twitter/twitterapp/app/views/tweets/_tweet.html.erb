@@ -9,10 +9,13 @@
   <p id="show-tweet", class="col-lg-12 ", style="font-size:120%" >&nbsp<%= tweet.body %>
   <br>
   <br>
-   &nbsp<%=link_to( "",tweet_path(tweet),class: "glyphicon glyphicon-comment", style: "color:blue") %> &nbsp<%= tweet.comments.count %>
-   &nbsp<%=link_to "", tweets_path,class: "glyphicon glyphicon-heart", style: "color:black" %> &nbsp<%= tweet.comments.size %>
+  &nbsp<%=link_to( "",tweet_path(tweet),class: "glyphicon glyphicon-comment", style: "color:blue") %> 
+  <%= tweet.comments.count %>
+  &nbsp
+  <%#=link_to( "",retweet_create_path,class: "glyphicon glyphicon-retweet", style: "color:#1b95e0") %>
+  &nbsp<%= tweet.comments.size %>
   <% if @tweet.user_id == current_user.id %>
-    &nbsp<%=link_to " ",tweet_path(tweet), method: :delete, style: "color:red",class: "glyphicon glyphicon-trash", remote: true%>
+  &nbsp<%=link_to " ",tweet_path(tweet), method: :delete, style: "color:red",class: "glyphicon glyphicon-trash", remote: true%>
   <% end %>
   </p>
   <hr>

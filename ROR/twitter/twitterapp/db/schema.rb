@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170106064213) do
+ActiveRecord::Schema.define(version: 20170109074321) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "body"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 20170106064213) do
   add_index "relationships", ["followed_id", "follower_id"], name: "index_relationships_on_followed_id_and_follower_id", unique: true
   add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
+
+  create_table "retweets", force: :cascade do |t|
+    t.text    "body"
+    t.integer "user_id"
+    t.integer "tweet_id"
+  end
+
+  add_index "retweets", ["tweet_id"], name: "index_retweets_on_tweet_id"
+  add_index "retweets", ["user_id"], name: "index_retweets_on_user_id"
 
   create_table "tweets", force: :cascade do |t|
     t.text     "body"

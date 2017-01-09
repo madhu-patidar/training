@@ -5,7 +5,13 @@ class CommentsController < ApplicationController
     @tweet = Tweet.find(params[:tweet_id])
     @comment = @tweet.comments.new(comment_params)
     @comment.user_id = current_user.id
-    @comment.save 
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to tweet_path(@tweet), notice: 'User was successfully comment.' }
+      else
+        format.html { redirect_to tweet_path(@tweet),  notice: 'comment can not be blank!!.'}
+      end
+    end
   end
 
   def update
@@ -21,7 +27,8 @@ class CommentsController < ApplicationController
     end
 
   end
-   def comment_params
-      params.require(:comment).permit(:body)
-    end
+  
+  def comment_params
+    params.require(:comment).permit(:body)
+  end
 end

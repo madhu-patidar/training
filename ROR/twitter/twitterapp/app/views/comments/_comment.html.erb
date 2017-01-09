@@ -4,7 +4,7 @@
   <p id="show-tweet", class="col-lg-12 ", style="font-size:120%" >
     &nbsp<%= comment.body %><br><br>
     <% if comment.tweet_id == comment.tweet.id %>
-      &nbsp<%=link_to "", [comment.tweet, comment], method: :delete,style: "color:blue",class: "glyphicon glyphicon-trash" ,remote: true%><hr>
+      &nbsp<%=link_to "", [comment.tweet, comment], method: :delete,style: "color:blue",class: "glyphicon glyphicon-trash"%><hr>
     <% end %>
   </p><hr>
 </div>

@@ -40,7 +40,9 @@
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header" style="width: 83px;">
-          <%= image_tag "twitter-128.png",style: "width: 43px; height: 43px;" ,alt:"brand" %>
+          <%= link_to(tweets_path) do %>
+            <%= image_tag "twitter-128.png",style: "width: 43px; height: 43px;" ,alt:"brand" %>
+          <% end %>
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><%= link_to('', tweets_path ,class: "glyphicon glyphicon-home")%></li>
