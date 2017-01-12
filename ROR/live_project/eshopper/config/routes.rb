@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :customers
-  resources :coustomers do
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :customers, :controllers => { :omniauth_callbacks => "customers/omniauth_callbacks" }
+
+  as :user do
+  get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'    
+  put 'users' => 'devise/registrations#update', :as => 'user_registration'            
+end
+
+  resources :customers do
     member do
       get 'cart'
     end
