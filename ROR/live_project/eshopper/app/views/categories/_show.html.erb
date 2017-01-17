@@ -1,0 +1,11 @@
+<% @categories.each do |category|%>  
+  <% if category.name =="MENS" %>
+     <% category.sub_categories.each_with_index do |subcategory,index| %>
+        <li class="<%= "active" if index==0 %>">
+          <a data-toggle="tab" href="#tshirt">
+           <%= subcategory.name %>
+          </a>
+        </li>
+      <% end %>
+  <% end %>
+<% end %>

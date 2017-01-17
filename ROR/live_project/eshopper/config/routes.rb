@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  
+  resources :products
+  resources :categories do
+    resources :brands
+  end
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :customers, :controllers => { :omniauth_callbacks => "customers/omniauth_callbacks" }
 

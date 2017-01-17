@@ -3,7 +3,7 @@ class Customer < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook,:google_oauth2,:twitter]
-  validates :name, presence: true,allow_blank: true
+  validates :first_name, presence: true,allow_blank: true
   validates :email, presence: true, allow_blank: true
   validates :password, presence: true, length: {minimum: 6}, allow_blank: true
 

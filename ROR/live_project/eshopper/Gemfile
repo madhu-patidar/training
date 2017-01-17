@@ -31,6 +31,11 @@ gem 'omniauth-facebook'
 gem "omniauth-google-oauth2"
 gem 'rails_admin', '~> 1.0'
 gem "paperclip", "~> 4.2"
+gem 'awesome_print'
+gem 'table_print'
+gem 'pry'
+
+
 
 
 # Use ActiveModel has_secure_password

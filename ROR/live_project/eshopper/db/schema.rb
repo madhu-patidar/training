@@ -11,25 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112145657) do
+ActiveRecord::Schema.define(version: 20170116122437) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
-    t.text     "context"
+    t.text     "content"
     t.boolean  "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "brand_categories", force: :cascade do |t|
+    t.integer  "category_id"
+    t.integer  "brand_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "brand_categories", ["brand_id"], name: "index_brand_categories_on_brand_id"
+  add_index "brand_categories", ["category_id"], name: "index_brand_categories_on_category_id"
+
+  create_table "brands", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
-    t.boolean  "status"
-    t.integer  "product_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "status"
   end
 
-  add_index "categories", ["product_id"], name: "index_categories_on_product_id"
+  add_index "categories", ["category_id"], name: "index_categories_on_category_id"
 
   create_table "coustomers", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -78,8 +94,12 @@ ActiveRecord::Schema.define(version: 20170112145657) do
     t.text     "description"
     t.boolean  "status"
     t.integer  "quantity"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
 end

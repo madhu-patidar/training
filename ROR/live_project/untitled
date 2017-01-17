@@ -1,0 +1,57 @@
+<% @categories.each do |category| %>
+      <% if category.category_id == nil %>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordian" href="#">
+                <% if .brands.present? %>
+                  <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                <% end %>
+                <%= category.name%>
+              </a>
+            </h4>
+          </div>
+          <div id="sportswear" class="panel-collapse collapse">
+            <div class="panel-body">
+              <ul>
+                <%if category.brands %>
+                  <% @categories.find(category.id).brands.each do |brand|%>
+                <li><a href="#"><%= brand.name %></a></li>
+              <% end %>
+                 <% end %>
+              </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <% end %>
+
+<% @categories.each do |category| %>
+        <% if category.category_id == nil %>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordian" href="<% category.id %>">
+                  <% if category.brands.present? %>
+                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                  <% end %>
+                  <%= category.name %>
+                </a>
+              </h4>
+            </div>
+            <div id="<% category.id %>" class="panel-collapse collapse">
+              <div class="panel-body">
+                <ul>
+                  <% if category.brands.present? %>
+                    <% @categories.find(category.id).brands.each do |brand|%>
+                      <li><a href="#"><%= brand.name %></a></li>
+                    <% end %>
+                  <% end %>
+                </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
