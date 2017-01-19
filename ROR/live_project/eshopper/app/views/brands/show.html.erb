@@ -2,28 +2,20 @@
   <div class="container">
     <div class="row">
       <%= render "components/left_side_bar"%>
-      <div class="col-sm-9 padding-right">
+       <div class="col-sm-9 padding-right">
         <div class="category-tab"><!--category-tab-->
           <div class="col-sm-12">
             <ul class="nav nav-tabs">
-                 <% @sub_categories.each_with_index do |subcategory,index| %>
-                    <li class="<%= "active" if index==0 %>">
-                      <a data-toggle="tab" href="#tshirt">
-                       <% if subcategory.name.start_with?('<') %>
-                        <%= subcategory.name.split(">")[1] %>
-                        <% elsif %>
-                          <%= subcategory.name %>
-                          <% end %>
-                      </a>
-                    </li>
-                  <% end %>
-            </ul>
+             <%= render "subcategories"%>
+           </ul>
           </div>
-          <%= render "components/content" %>
+          <%= render "products" %>
+        </div>
+         
         <div class="recommended_items"><!--recommended_items-->
-          <h2 class="title text-center">recommended items</h2>
-          <%= render "components/recommended" %>
-        </div><!--/recommended_items-->
       </div>
-    </div>
+      <h2 class="title text-center">recommended items</h2>
+      <%= render "components/recommended" %>
+    </div><!--/recommended_items-->
   </div>
+</div>

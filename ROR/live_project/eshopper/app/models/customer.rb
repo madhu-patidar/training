@@ -1,11 +1,12 @@
 class Customer < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :cart_items
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook,:google_oauth2,:twitter]
-  validates :first_name, presence: true,allow_blank: true
-  validates :email, presence: true, allow_blank: true
-  validates :password, presence: true, length: {minimum: 6}, allow_blank: true
+  validates :first_name, presence: true
+  validates :email, presence: true
+  validates :password, length: {minimum: 6}, allow_blank: true
 
 
   def self.from_omniauth(auth)

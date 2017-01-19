@@ -6,27 +6,14 @@
         <div class="category-tab"><!--category-tab-->
           <div class="col-sm-12">
             <ul class="nav nav-tabs">
-             <% if @category.present? %>
-                <% if @sub_categories.present? %>
-                 <% @sub_categories.each_with_index do |subcategory,index| %>
-                    <li class="<%= "active" if index==0 %>">
-                      <a data-toggle="tab" href="#tshirt">
-                         <% if @category.sub_categories.present? %>
-                       <% if subcategory.name.start_with?('<') %>
-                          <%= subcategory.name.split(">")[1] %>
-                        <% elsif %>
-                          <%= subcategory.name %>
-                        <% end %><% end %>
-                      </a>
-                    </li>
-                  <% end %>
-                <% end %>
-              <% end %>
-            </ul>
+             <%= render "categories"%>
+           </ul>
           </div>
-          <%= render "components/content" %>
+          <%= render "products" %>
+        </div>
         <div class="recommended_items"><!--recommended_items-->
           <h2 class="title text-center">recommended items</h2>
+        </div><!--/category-tab-->
           <%= render "components/recommended" %>
         </div><!--/recommended_items-->
       </div>

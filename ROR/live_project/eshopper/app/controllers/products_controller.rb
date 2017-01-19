@@ -5,11 +5,19 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    puts "***********************00***"
+    puts params
+    puts "***********************"
+    @brand = Brand.find(params[:id])
+    @brand_products = @brand.products
+    @category = Category.find(params[:id])
+    @brand_products = @category.products
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+
   end
 
   # GET /products/new

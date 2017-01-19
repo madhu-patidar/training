@@ -10,12 +10,18 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    if params[:category_id].present?
+      @sub = Category.find(params[:category_id])
+      @products = Product.where(category_id: params[:category_id])
+     else
+      @products = Product.where(category_id: 1)
+    end
+    @category=Category.find(params[:id])
     @banners = Banner.all
     @categories = Category.all
     @brands = Brand.all
     @brand = Brand.find(params[:id])
     @sub_categories = @category.sub_categories
-
   end
 
   # GET /categories/new

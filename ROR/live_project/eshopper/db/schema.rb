@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116122437) do
+ActiveRecord::Schema.define(version: 20170119141744) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -36,6 +36,17 @@ ActiveRecord::Schema.define(version: 20170116122437) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer  "customer_id"
+    t.integer  "product_id"
+    t.integer  "quantity"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "cart_items", ["customer_id"], name: "index_cart_items_on_customer_id"
+  add_index "cart_items", ["product_id"], name: "index_cart_items_on_product_id"
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -91,15 +102,22 @@ ActiveRecord::Schema.define(version: 20170116122437) do
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.decimal  "price"
-    t.text     "description"
-    t.boolean  "status"
+    t.string   "short_description"
+    t.integer  "status"
     t.integer  "quantity"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.string   "picture_file_name"
-    t.string   "picture_content_type"
-    t.integer  "picture_file_size"
-    t.datetime "picture_updated_at"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "brand_id"
+    t.integer  "category_id"
+    t.string   "sku"
+    t.decimal  "special_price"
+    t.text     "long_description"
+    t.string   "meta_title"
+    t.text     "meta_description"
+    t.text     "meta_keywords"
   end
+
+  add_index "products", ["brand_id"], name: "index_products_on_brand_id"
+  add_index "products", ["category_id"], name: "index_products_on_category_id"
 
 end

@@ -74,7 +74,7 @@
                 <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                 <li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                <li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><%= link_to(cart_item_path(current_customer)) do %><i class="fa fa-shopping-cart"></i> Cart(<%= current_customer.cart_items.count if customer_signed_in?%>)<% end %></li>
                 <%if  customer_signed_in? %>
                   <li>
                     <%= link_to(destroy_customer_session_path, :method => :delete) do %>  <i class="fa fa-sign-out"></i>Logout  
