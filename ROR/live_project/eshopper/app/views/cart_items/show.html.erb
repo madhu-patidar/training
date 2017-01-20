@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
   <section id="cart_items">
     <div class="container">
       <div class="breadcrumbs">
@@ -47,7 +47,7 @@
                 <p class="cart_total_price">Rs.<%=item.quantity*item.product.price%></p>
               </td>
               <td class="cart_delete">
-                <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                <%= link_to(cart_item_path(item),class: "cart_quantity_delete", method: :delete,data: {confirm: "Are you sure?"}) do %><i class="fa fa-times"></i><%end%>
               </td>
             </tr>
             <% end %>
