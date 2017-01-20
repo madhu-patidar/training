@@ -16,7 +16,9 @@ body {
 ul li {
   list-style: none;
 }
-
+.tb_data{
+  margin-left:60px;
+}
 a:hover {
 outline: none;
 text-decoration:none;

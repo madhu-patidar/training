@@ -41,7 +41,7 @@
         <ul class="nav nav-pills nav-stacked">
           <% @brands.each_with_index do |brand,index| %>
           <%if index < 10 %>
-            <li><a href="#"> <span class="pull-right">(<%= rand(5..90) %>)</span><%= brand.name %></a></li>
+            <li><a href="#"> <span class="pull-right">(<%= brand.products.count %>)</span><%= brand.name %></a></li>
           <% end %> <% end %>
         </ul>
       </div>

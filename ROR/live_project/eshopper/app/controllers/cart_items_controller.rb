@@ -10,7 +10,7 @@ class CartItemsController < ApplicationController
   # GET /cart_items/1
   # GET /cart_items/1.json
   def show
-    @cart_items = CartItem.where(customer_id: current_customer)
+    @cart_items = CartItem.where(customer_id: current_customer.id)
   end
 
   # GET /cart_items/new
@@ -25,16 +25,30 @@ class CartItemsController < ApplicationController
   # POST /cart_items
   # POST /cart_items.json
   def create
-    
-    
     if !customer_signed_in?
       redirect_to new_customer_session_path
     else
-      params[:customer_id] = current_customer.id
-
-      @cart_item = CartItem.new(cart_item_params)
+      @product = Product.find(params[:product_id])
+      if @product.quantity >= 1 
+        @cart_item = CartItem.where(product_id: params[:product_id],customer_id:current_customer.id).first
+        if @cart_item.present?
+          @cart_item.quantity += 1
+        else
+          @cart_item = CartItem.new(product_id: params[:product_id],customer_id: current_customer.id, quantity: 1)
+        end
+        
+      respond_to do |format|
       if @cart_item.save
-         redirect_to back
+          @product.quantity -= 1
+          @product.save
+        format.html { redirect_to :back, notice: 'Item was successfully added to Cart.' }
+        format.json { render :show, status: :created, location: @cart_item }
+      else
+        format.html { render :back }
+        format.json { render json: @coustomer.errors, status: :unprocessable_entity }
+      end
+    end
+       
       end
     end
   end
