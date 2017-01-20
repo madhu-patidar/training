@@ -1,5 +1,5 @@
 class CartItemsController < ApplicationController
-  before_action :set_cart_item, only: [ :edit, :update, :destroy]
+  before_action :set_cart_item, only: [ :edit,  :destroy]
 
   # GET /cart_items
   # GET /cart_items.json
@@ -56,8 +56,27 @@ class CartItemsController < ApplicationController
   # PATCH/PUT /cart_items/1
   # PATCH/PUT /cart_items/1.json
   def update
+  
+
+    @cart_item = CartItem.find(params[:id])
+     @product = Product.find(params[:product_id])
+    if params[:qty] == "minus" 
+      if @cart_item.quantity > 1
+        @cart_item.quantity -= 1
+        @product.quantity += 1
+      end
+
+     
+    else
+      if @product.quantity > 1
+        @cart_item.quantity += 1
+        @product.quantity -= 1
+      end
+    end
+
     respond_to do |format|
-      if @cart_item.update(cart_item_params)
+      if @cart_item.save
+        @product.save
         format.html { redirect_to @cart_item, notice: 'Cart item was successfully updated.' }
         format.json { render :show, status: :ok, location: @cart_item }
       else

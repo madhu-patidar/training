@@ -7,7 +7,7 @@
           <li class="active">Shopping Cart</li>
         </ol>
       </div>
-      <div class="table-responsive cart_info">
+      <div class=" cart_info">
         <table class="table table-condensed">
           <thead>
             <tr class="cart_menu">
@@ -21,7 +21,7 @@
           </thead>
           <tbody>
             
-
+            <% cart_sub_total = 0 %>
             <% @cart_items.each do |item|%>
             <tr>
               <td class="cart_product">
@@ -38,16 +38,17 @@
               </td>
               <td class="cart_quantity">
                 <div class="cart_quantity_button">
-                  <a class="cart_quantity_up" href=""> + </a>
+                  <%= link_to(cart_item_path(item, qty: "plas",product_id: item.product.id), class: "cart_quantity_up",:method => :put) do %> + <% end %>
                   <input class="cart_quantity_input" type="text" name="quantity" value="<%=item.quantity%>" autocomplete="off" size="2">
-                  <a class="cart_quantity_down" href=""> - </a>
+                   <%= link_to(cart_item_path(item, qty: "minus",product_id: item.product.id), class: "cart_quantity_up",:method => :put) do %> - <% end %>
                 </div>
               </td>
               <td class="cart_total">
                 <p class="cart_total_price">Rs.<%=item.quantity*item.product.price%></p>
+                <% cart_sub_total += item.quantity*item.product.price%>
               </td>
               <td class="cart_delete">
-                <%= link_to(cart_item_path(item),class: "cart_quantity_delete", method: :delete,data: {confirm: "Are you sure?"}) do %><i class="fa fa-times"></i><%end%>
+                <%= link_to(cart_item_path(item),class: "cart_quantity_delete", method: :delete,data: {confirm: "Are you want remove item from Cart?"}) do %><i class="fa fa-times"></i><%end%>
               </td>
             </tr>
             <% end %>
@@ -122,10 +123,10 @@
         <div class="col-sm-6">
           <div class="total_area">
             <ul>
-              <li>Cart Sub Total <span>$59</span></li>
-              <li>Eco Tax <span>$2</span></li>
+              <li>Cart Sub Total <span><%= cart_sub_total %></span></li>
+              <li>Eco Tax <span><%= tax = (cart_sub_total*7.5)/100%>  </span></li>
               <li>Shipping Cost <span>Free</span></li>
-              <li>Total <span>$61</span></li>
+              <li>Total <span><%= tax+ cart_sub_total %></span></li>
             </ul>
               <a class="btn btn-default update" href="">Update</a>
               <a class="btn btn-default check_out" href="">Check Out</a>

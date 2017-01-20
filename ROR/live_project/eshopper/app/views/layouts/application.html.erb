@@ -49,25 +49,33 @@
           <div class="col-sm-8">
             <div class="shop-menu pull-right">
               <ul class="nav navbar-nav">
-                <% if customer_signed_in? %>
+               
                 <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                 <li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                 
-                <li><%= link_to(cart_item_path(current_customer)) do %><i class="fa fa-shopping-cart"></i> Cart(<%= current_customer.cart_items.count %>)<% end %></li><% end %>
+                  <% if customer_signed_in? %>
+                <li><%= link_to(cart_item_path(current_customer)) do %><i class="fa fa-shopping-cart"></i> Cart <% if current_customer.cart_items.count > 0 %>(<%= current_customer.cart_items.count %>)<% end %><% end %></li><% end %>
                 <%if  customer_signed_in? %>
                   <li>
                     <%= link_to(destroy_customer_session_path, :method => :delete) do %>  <i class="fa fa-sign-out"></i>Logout  
+                    <% end %>
+                  </li>
+                  <li>
+                    <% if current_customer.first_name.present? %>
+                      <%= link_to("#") do %><%= current_customer.first_name %><%end%>
+                    <% else %>
+                     <%= current_customer.email %>
                     <% end %>
                   </li>
                 
                 <% else  %>
                 <%- if controller_name != 'sessions' %>
                   <li>
-                    <%= link_to(new_customer_session_path) do %> <i class="fa fa-lock"></i>Login<br />
+                    <%= link_to(new_customer_session_path) do %> 
+                      <i class="fa fa-lock"></i>Login<br />
                     <% end -%>
                   </li>
-                  <% end -%>
+                <% end -%>
                 <% end %>
               </ul>
             </div>
