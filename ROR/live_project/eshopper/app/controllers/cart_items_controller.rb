@@ -1,5 +1,6 @@
 class CartItemsController < ApplicationController
   before_action :set_cart_item, only: [ :edit,  :destroy]
+  before_action :authenticate_customer!
 
   # GET /cart_items
   # GET /cart_items.json
@@ -10,7 +11,13 @@ class CartItemsController < ApplicationController
   # GET /cart_items/1
   # GET /cart_items/1.json
   def show
+    @cart_sub_total = 0
     @cart_items = CartItem.where(customer_id: current_customer.id)
+    @cart_sub_total = 0
+    @cart_items.each_with_index do |item,index|
+      @cart_sub_total += item.quantity*item.product.price
+   end
+   @tax = (@cart_sub_total*7.5)/100
   end
 
   # GET /cart_items/new
@@ -25,39 +32,42 @@ class CartItemsController < ApplicationController
   # POST /cart_items
   # POST /cart_items.json
   def create
-    if !customer_signed_in?
-      redirect_to new_customer_session_path
-    else
-      @product = Product.find(params[:product_id])
-      if @product.quantity >= 1 
-        @cart_item = CartItem.where(product_id: params[:product_id],customer_id:current_customer.id).first
-        if @cart_item.present?
-          @cart_item.quantity += 1
-        else
-          @cart_item = CartItem.new(product_id: params[:product_id],customer_id: current_customer.id, quantity: 1)
-        end
-        
-      respond_to do |format|
-      if @cart_item.save
-          @product.quantity -= 1
-          @product.save
-        format.html { redirect_to :back, notice: 'Item was successfully added to Cart.' }
-        format.json { render :show, status: :created, location: @cart_item }
-      else
-        format.html { render :back }
-        format.json { render json: @coustomer.errors, status: :unprocessable_entity }
-      end
+    quantity = 1
+
+
+    if params[:controller_name].present? && params[:cart_item][:quantity].present?
+      quantity = params[:cart_item][:quantity].to_i
     end
-       
+    @product = Product.find(params[:product_id])
+    if @product.quantity >= quantity && quantity > 0 
+      @cart_item = CartItem.where(product_id: params[:product_id],customer_id:current_customer.id).first
+      if @cart_item.present?
+        @cart_item.quantity += quantity
+      else
+        @cart_item = CartItem.new(product_id: params[:product_id],customer_id: current_customer.id, quantity: quantity)
       end
+      respond_to do |format|
+        if @cart_item.save
+          @product.quantity -= quantity
+          @product.save
+          format.html { redirect_to :back, notice: 'Item was successfully added to Cart.' }
+          format.js { render :layout => false }
+          format.json { render :back, status: :created, location: @cart_item }
+        else
+          format.html { render :back }
+          format.json { render json: @coustomer.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      redirect_to :back
     end
   end
+  
 
   # PATCH/PUT /cart_items/1
   # PATCH/PUT /cart_items/1.json
   def update
-  
-
+    @cart_sub_total = 0
     @cart_item = CartItem.find(params[:id])
      @product = Product.find(params[:product_id])
     if params[:qty] == "minus" 
@@ -65,10 +75,8 @@ class CartItemsController < ApplicationController
         @cart_item.quantity -= 1
         @product.quantity += 1
       end
-
-     
     else
-      if @product.quantity > 1
+      if @product.quantity > 0
         @cart_item.quantity += 1
         @product.quantity -= 1
       end
@@ -77,7 +85,13 @@ class CartItemsController < ApplicationController
     respond_to do |format|
       if @cart_item.save
         @product.save
-        format.html { redirect_to @cart_item, notice: 'Cart item was successfully updated.' }
+        @cart_items = CartItem.where(customer_id: current_customer.id)
+        @cart_items.each do |item|
+          @cart_sub_total += item.quantity*item.product.price
+        end
+        @tax = (@cart_sub_total*7.5)/100
+        format.html { redirect_to :back, notice: 'Cart item was successfully updated.' }
+        format.js {render :layout => false }
         format.json { render :show, status: :ok, location: @cart_item }
       else
         format.html { render :edit }
@@ -95,6 +109,7 @@ class CartItemsController < ApplicationController
     @product.save
     respond_to do |format|
       format.html { redirect_to cart_item_url, notice: 'Cart item was successfully destroyed.' }
+      format.js { render :layout => false, notice: 'Cart item was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

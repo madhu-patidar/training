@@ -10,16 +10,15 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @top_brands = Brand.take(10)
+    @category=Category.find(params[:id])
     if params[:category_id].present?
       @sub = Category.find(params[:category_id])
       @products = Product.where(category_id: params[:category_id])
      else
-      @products = Product.where(category_id: 1)
+      @products = Product.where(category_id: @category.sub_categories.first.id)
     end
-    @category=Category.find(params[:id])
-    @banners = Banner.all
     @categories = Category.all
-    @brands = Brand.all
     @brand = Brand.find(params[:id])
     @sub_categories = @category.sub_categories
   end
@@ -36,6 +35,7 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
+    
     @category = Category.new(category_params)
 
     respond_to do |format|

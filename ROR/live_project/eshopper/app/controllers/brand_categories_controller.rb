@@ -1,3 +1,4 @@
+
 class BrandCategoriesController < ApplicationController
   before_action :set_brand_category, only: [:show, :edit, :update, :destroy]
 

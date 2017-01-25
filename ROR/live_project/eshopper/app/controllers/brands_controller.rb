@@ -10,7 +10,7 @@ class BrandsController < ApplicationController
   # GET /brands/1
   # GET /brands/1.json
   def show 
-
+    @top_brands = Brand.take(10)
     @brands = Brand.all
     @categories = Category.all
     @category = Category.find(params[:category_id])
@@ -20,7 +20,11 @@ class BrandsController < ApplicationController
       @sub = Category.find(params[:sub_category_id])
       @products = Product.where(category_id: params[:sub_category_id] ,brand_id:params[:id])
     else
-      @products = Product.where(category_id: @sub_categories.first.id,brand_id: params[:id])
+      if @sub_categories.present?
+        @products = Product.where(category_id: @sub_categories.first.id,brand_id: params[:id])
+      else
+        @products = Product.where(category_id: @category.sub_categories.first.id,brand_id: params[:id])
+      end
     end
   end
 

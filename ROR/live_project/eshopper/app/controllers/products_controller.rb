@@ -9,12 +9,18 @@ class ProductsController < ApplicationController
     @brand = Brand.find(params[:id])
     @brand_products = @brand.products
     @category = Category.find(params[:id])
+    @categories = Category.all
     @brand_products = @category.products
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @categories = Category.all
+   @top_brands = Brand.take(10)
+    @category = @product.category
+    @cart_item = CartItem.new
+
 
   end
 

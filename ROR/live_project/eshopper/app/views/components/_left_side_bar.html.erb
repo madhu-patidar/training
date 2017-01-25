@@ -22,7 +22,8 @@
                 <div class="panel-body">
                   <ul>
                       <% @categories.find(category.id).brands.each do |brand|%>
-                        <li><%= link_to(category_brand_path(category,brand)) do %><%= brand.name %><% end %></li>
+                        <li class="<%= "brand" if current_page?category_brand_path(brand,category_id: category) %>">
+                          <%= link_to(category_brand_path(category,brand)) do %><%= brand.name %><% end %></li>
                       <% end %>
                     
                   </ul>
@@ -39,10 +40,10 @@
       <h2>Brands</h2>
       <div class="brands-name">
         <ul class="nav nav-pills nav-stacked">
-          <% @brands.each_with_index do |brand,index| %>
-          <%if index < 10 %>
+          <% @top_brands.each_with_index do |brand,index| %>
+          
             <li><a href="#"> <span class="pull-right">(<%= brand.products.count %>)</span><%= brand.name %></a></li>
-          <% end %> <% end %>
+         <% end %>
         </ul>
       </div>
     </div><!--/brands_products-->

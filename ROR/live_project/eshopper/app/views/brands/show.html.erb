@@ -9,12 +9,19 @@
              <%= render "subcategories"%>
            </ul>
           </div>
-          <%= render "components/content" %>
-        </div>
-         
-        <div class="recommended_items"><!--recommended_items-->
-      </div>
-      <h2 class="title text-center">recommended items</h2>
+          <div class="tab-content">
+            <%if @products.present? %>
+              <% @products.each do |product| %>
+                <div class="tab-pane fade active in" id="<%=product.id%>" >
+                  <%= render "components/content" ,product: product %>
+                </div>
+              <%end%>
+            <% else %>
+              <h2 align="center"> Product not available</h2>
+            <% end %>
+           </div>
+        </div><!--/category-tab-->
+     
       <%= render "components/recommended" %>
     </div><!--/recommended_items-->
   </div>
