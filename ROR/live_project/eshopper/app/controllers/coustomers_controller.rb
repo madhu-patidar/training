@@ -40,6 +40,7 @@ class CoustomersController < ApplicationController
   # PATCH/PUT /coustomers/1
   # PATCH/PUT /coustomers/1.json
   def update
+
     respond_to do |format|
       if @coustomer.update(coustomer_params)
         format.html { redirect_to @coustomer, notice: 'Coustomer was successfully updated.' }
@@ -49,16 +50,19 @@ class CoustomersController < ApplicationController
         format.json { render json: @coustomer.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # DELETE /coustomers/1
   # DELETE /coustomers/1.json
   def destroy
     @coustomer.destroy
+
     respond_to do |format|
       format.html { redirect_to coustomers_url, notice: 'Coustomer was successfully destroyed.' }
       format.json { head :no_content }
     end
+    
   end
 
   private

@@ -7,17 +7,7 @@
 	};	
 		
 /*scroll to top*/
-function myFunction() { 
- 
-    $.ajax({
-      type: "PUT",
-      url: "/cart_items/<%= id %>"
-     
-     
-    });
-}
-
-
+// 
 $(document).ready(function(){
 	$(function () {
 		$.scrollUp({

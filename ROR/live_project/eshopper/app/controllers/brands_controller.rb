@@ -16,16 +16,16 @@ class BrandsController < ApplicationController
     @category = Category.find(params[:category_id])
     @brand = Brand.find(params[:id])
     @sub_categories = @brand.categories.where(category_id: params[:category_id]).order(:id)
+
     if params[:sub_category_id].present?
       @sub = Category.find(params[:sub_category_id])
-      @products = Product.where(category_id: params[:sub_category_id] ,brand_id:params[:id])
-    else
-      if @sub_categories.present?
+      @products = Product.where(category_id: params[:sub_category_id], brand_id: params[:id])
+    elsif @sub_categories.present?
         @products = Product.where(category_id: @sub_categories.first.id,brand_id: params[:id])
-      else
-        @products = Product.where(category_id: @category.sub_categories.first.id,brand_id: params[:id])
-      end
+    else
+      @products = Product.where(category_id: @category.sub_categories.first.id,brand_id: params[:id])
     end
+   
   end
 
   # GET /brands/new
@@ -51,11 +51,13 @@ class BrandsController < ApplicationController
         format.json { render json: @brand.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /brands/1
   # PATCH/PUT /brands/1.json
   def update
+    
     respond_to do |format|
       if @brand.update(brand_params)
         format.html { redirect_to @brand, notice: 'Brand was successfully updated.' }
@@ -65,16 +67,19 @@ class BrandsController < ApplicationController
         format.json { render json: @brand.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # DELETE /brands/1
   # DELETE /brands/1.json
   def destroy
     @brand.destroy
+    
     respond_to do |format|
       format.html { redirect_to brands_url, notice: 'Brand was successfully destroyed.' }
       format.json { head :no_content }
     end
+    
   end
 
   private

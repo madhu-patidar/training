@@ -5,7 +5,6 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-   
     @brand = Brand.find(params[:id])
     @brand_products = @brand.products
     @category = Category.find(params[:id])
@@ -17,7 +16,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @categories = Category.all
-   @top_brands = Brand.take(10)
+    @top_brands = Brand.take(10)
     @category = @product.category
     @cart_item = CartItem.new
 
@@ -52,6 +51,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
@@ -61,16 +61,19 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
     @product.destroy
+
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
+    
   end
 
   private

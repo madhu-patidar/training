@@ -15,8 +15,10 @@
   <div class="cart_quantity_button">
     <% but_disable1 = item.quantity == 1 ? "disabled" : ""%>
     <% but_disable2 = item.product.quantity == 0 ? "disabled" : ""%>
-    <%= link_to(cart_item_path(item, qty: "plus",product_id: item.product.id), class: "cart_quantity_up btn #{but_disable2}",:method => :put,remote: true) do %> + <% end %>
-    <%= number_field_tag :quntity, "#{item.quantity}", class: "cart_quantity_input", min: "1", max:"1000",  autocomplete: "off" ,size: "2", onfocusout: "myFunction()"  %>
+    <%= link_to(cart_item_path(item, qty: "plus",product_id: item.product.id), class: "cart_quantity_up btn #{but_disable2}", :method => :put) do %> + <% end %>
+
+    <%= number_field_tag :quantity, "#{item.quantity}", class: "cart_quantity_input", id: "cart-item-#{item.id}", min: 1, max:"#{item.quantity+item.product.quantity}" , onfocusout: "update_quantity(#{item.id}, #{item.product.id},1, #{item.quantity+item.product.quantity}, #{item.quantity})" %>
+
    <%= link_to(cart_item_path(item, qty: "minus",product_id: item.product.id), class: "cart_quantity_up btn #{but_disable1} ",:method => :put,remote: true) do %> - <% end %>
   </div>
 </td>

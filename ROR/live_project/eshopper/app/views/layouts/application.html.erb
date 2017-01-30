@@ -18,8 +18,14 @@
                 <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
 
                 <% if customer_signed_in? %>
-                <% if current_customer.admin == true%>
-                <li><%= link_to(rails_admin_path) do%><i class="fa fa-user"></i> Admin<%end%></li><% end %><% end %>
+                  <% if current_customer.admin == true%>
+                    <li>
+                      <%= link_to(rails_admin_path) do%>
+                        <i class="fa fa-user"></i> Admin
+                      <%end%>
+                    </li>
+                  <% end %>
+                <% end %>
               </ul>
             </div>
           </div>
@@ -55,19 +61,30 @@
                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                 <li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                   <% if customer_signed_in? %>
-                <li><%= link_to(cart_item_path(current_customer)) do %><i class="fa fa-shopping-cart"></i> Cart <% if current_customer.cart_items.count > 0 %>(<%= current_customer.cart_items.count %>)<% end %><% end %></li><% end %>
-                <%if  customer_signed_in? %>
-                  <li>
-                    <%= link_to(destroy_customer_session_path, :method => :delete) do %>  <i class="fa fa-sign-out"></i>Logout  
-                    <% end %>
-                  </li>
-                  <li>
-                    <% if current_customer.first_name.present? %>
-                      <%= link_to("#") do %><%= current_customer.first_name %><%end%>
+
+                    <% if current_page?cart_item_path(current_customer) %>
+                      <% active1 = "active" %>
                     <% else %>
-                     <%= current_customer.email %>
-                     <% end %>
-                  </li>
+                      <% active1 = ""%> 
+                    <%end%>
+
+                    <li id="hh">
+                      <%= link_to(cart_item_path(current_customer), class: "#{active1}") do %>
+                        <i class="fa fa-shopping-cart"></i> Cart<span id="cart-item-count"> (<%= current_customer.cart_items.count %>)</span>
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to(destroy_customer_session_path, :method => :delete) do %>  <i class="fa fa-sign-out"></i>Logout  
+                      <% end %>
+                    </li>
+                    <li>
+                      <% if current_customer.first_name.present? %>
+                        <%= link_to("#") do %><%= current_customer.first_name %><%end%>
+                      <% else %>
+                        <%= current_customer.email %>
+                      <% end %>
+                    </li>
+                    
                 <%- elsif controller_name != 'sessions' %>
                   <li>
                     <%= link_to(new_customer_session_path) do %> 
@@ -86,7 +103,7 @@
       </div>
     </div><!--/header-middle-->
   <h4 align="center"  style="color:green;"><%= notice %></h4>
-  <h4 align="center" style="color:green;" ><%= alert %></h4>
+  <h4 align="center" style="color:red;" ><%= alert %></h4>
         <% if controller_name != 'sessions'  && controller_name != 'registrations' %>
           <div class="header-bottom"><!--header-bottom-->
             <div class="container">
@@ -101,8 +118,15 @@
                       </button>
                     </div>
                     <div class="mainmenu pull-left">
+                      
+                      <% if current_page?(url_for(:controller => 'home', :action => 'index')) %>
+                        <% active = "active" %>
+                      <% else %>
+                        <% active = ""%> 
+                      <%end%>
+
                       <ul class="nav navbar-nav collapse navbar-collapse">
-                        <li><%= link_to "Home", root_path, class: "active" %></li>
+                        <li><%= link_to "Home", root_path, class: "#{active}" %></li>
                         <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                           <ul role="menu" class="sub-menu">
                               <li><a href="#">Products</a></li>

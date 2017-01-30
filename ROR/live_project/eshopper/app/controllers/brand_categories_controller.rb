@@ -28,6 +28,7 @@ class BrandCategoriesController < ApplicationController
     @brand_category = BrandCategory.new(brand_category_params)
 
     respond_to do |format|
+
       if @brand_category.save
         format.html { redirect_to @brand_category, notice: 'Brand category was successfully created.' }
         format.json { render :show, status: :created, location: @brand_category }
@@ -35,6 +36,7 @@ class BrandCategoriesController < ApplicationController
         format.html { render :new }
         format.json { render json: @brand_category.errors, status: :unprocessable_entity }
       end
+
     end
   end
 
@@ -42,6 +44,7 @@ class BrandCategoriesController < ApplicationController
   # PATCH/PUT /brand_categories/1.json
   def update
     respond_to do |format|
+
       if @brand_category.update(brand_category_params)
         format.html { redirect_to @brand_category, notice: 'Brand category was successfully updated.' }
         format.json { render :show, status: :ok, location: @brand_category }
@@ -49,6 +52,7 @@ class BrandCategoriesController < ApplicationController
         format.html { render :edit }
         format.json { render json: @brand_category.errors, status: :unprocessable_entity }
       end
+
     end
   end
 
@@ -56,10 +60,12 @@ class BrandCategoriesController < ApplicationController
   # DELETE /brand_categories/1.json
   def destroy
     @brand_category.destroy
+
     respond_to do |format|
       format.html { redirect_to brand_categories_url, notice: 'Brand category was successfully destroyed.' }
       format.json { head :no_content }
     end
+    
   end
 
   private

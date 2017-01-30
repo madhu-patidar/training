@@ -38,20 +38,29 @@
           <div class="col-sm-7">
             <div class="product-information"><!--/product-information-->
               <%= image_tag "product-details/new.jpg", class: "newarrival" %>
-              <%= form_for @cart_item , :url => { :controller => "cart_items", :action => "create" }, :html => {:method => :post, remote: true} do |f| %>
                 <h2><%= @product.name %></h2>
                 <p>Web ID: 1089772</p>
-                <%= image_tag "product-details/rating.png" %>
+                <p><%= image_tag "product-details/rating.png" %></p>
                 <span id= "item<%= @product.id%>">
-                  <span>&#8377;<%= @product.price %></span>
-                  <label>Quantity:</label>
-                  
-                  <%= f.number_field "quantity", in: 1..2000, step: 1, :value => 1 %>
-                  <%= hidden_field_tag :product_id, @product.id %>
-                  <%= hidden_field_tag :controller_name, :product %>
-                  <%= f.button(type: "submit", class: "btn btn-fefault cart") do %><i class="fa fa-shopping-cart"></i>Add to cart<% end %>
+                <span>&#8377;<%= @product.price %>&#160;&#160;&#160;&#160;
+                  <% if customer_signed_in? %>
+                    <% if current_customer.cart_items.pluck(:product_id ).include?(@product.id) %>
+                      <%= link_to(cart_item_path(current_customer), class: "btn btn-default add-to-cart") do %>
+                        <i class="fa fa-shopping-cart"></i> Go to Cart
+                      <% end -%>
+                    <% else %>
+                      <%= link_to(cart_items_path(product_id: @product.id),:method => :post, remote: true, class: "btn btn-default add-to-cart") do %>
+                        <i class="fa fa-shopping-cart"></i>Add to cart
+                      <% end -%>
+                    <% end %>
+                  <% else %> 
+                    <%= link_to(cart_items_path(product_id: product.id),:method => :post,  class: "btn btn-default add-to-cart") do %>
+                      <i class="fa fa-shopping-cart"></i>
+                      Add to cart
+                    <% end %>
+                  <%end%>
                 </span>
-              <% end %>
+              
               <p><b>Availability:</b><% if @product.quantity > 0 %>
                In Stock <% else %> Out Of Stock<% end %> </p>
               <p><b>Condition:</b> New</p>

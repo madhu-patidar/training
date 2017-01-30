@@ -12,12 +12,14 @@ class CategoriesController < ApplicationController
   def show
     @top_brands = Brand.take(10)
     @category=Category.find(params[:id])
+
     if params[:category_id].present?
       @sub = Category.find(params[:category_id])
       @products = Product.where(category_id: params[:category_id])
-     else
+    else
       @products = Product.where(category_id: @category.sub_categories.first.id)
     end
+
     @categories = Category.all
     @brand = Brand.find(params[:id])
     @sub_categories = @category.sub_categories
@@ -35,7 +37,6 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
-    
     @category = Category.new(category_params)
 
     respond_to do |format|
@@ -47,6 +48,7 @@ class CategoriesController < ApplicationController
         format.json { render json: @category.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /categories/1
@@ -67,6 +69,7 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1.json
   def destroy
     @category.destroy
+    
     respond_to do |format|
       format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
       format.json { head :no_content }

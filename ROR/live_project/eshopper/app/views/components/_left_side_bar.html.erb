@@ -17,16 +17,18 @@
                 </a>
               </h4>
             </div>
-            <div id="<%= category.id %>" class="panel-collapse collapse <%= category.id == @category.id ? 'in' : '' %>" >
+            <div id="<%= category.id %>" class=" collapse <%= category.id == @category.id ? 'in' : '' %>" >
               <% if category.brands.present? %>
                 <div class="panel-body">
+                  
                   <ul>
-                      <% @categories.find(category.id).brands.each do |brand|%>
-                        <li class="<%= "brand" if current_page?category_brand_path(brand,category_id: category) %>">
-                          <%= link_to(category_brand_path(category,brand)) do %><%= brand.name %><% end %></li>
-                      <% end %>
-                    
-                  </ul>
+                    <% @categories.find(category.id).brands.each do |brand|%>
+                    <%brand1 = ""%>
+                  <% brand1 = "brand" if current_page?category_brand_path(brand,category_id: category) %>
+                      <li>
+                        <%= link_to(category_brand_path(category,brand), class: "#{brand1}") do %><%= brand.name %><% end %>
+                      </li>
+                    <% end %>
                   </ul>
                 </div>
               <% end %>
